@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "jsx": "react",
+    "esModuleInterop": true
+  },
+  "include": ["src", "src/react.app.env.d.ts"]
+}
