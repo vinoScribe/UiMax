@@ -1,7 +1,7 @@
 import React from "react";
 import "./blogStyle.scss";
 
-const firstRowComponentOfTheBody = ({ image }) => {
+const FirstRowComponentOfTheBody = ({ image }) => {
   return (
     <div className="first_rowOf_body">
       <img src={image} alt="blog poster" />
@@ -19,4 +19,4 @@ const firstRowComponentOfTheBody = ({ image }) => {
   );
 };
 
-export default firstRowComponentOfTheBody;
+export default FirstRowComponentOfTheBody;

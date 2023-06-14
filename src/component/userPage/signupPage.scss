@@ -1,0 +1,144 @@
+$brandColor: rgba(32, 145, 249, 1);
+@mixin display-prop($justContent, $alingItems, $direction) {
+  display: flex;
+  justify-content: $justContent;
+  align-items: $alingItems;
+  flex-direction: $direction;
+}
+@mixin contentSize($hgt, $wdt) {
+  height: $hgt;
+  width: $wdt;
+}
+@mixin fontProp($size, $isBold) {
+  font-size: $size;
+  font-weight: $isBold;
+}
+* {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.03em;
+  font-family: sans-serif;
+}
+[type="button"] {
+  @include contentSize(42px, 92px);
+  @include fontProp(0.78em, bold);
+  background-color: $brandColor;
+  color: white;
+  border-radius: 5px;
+  border: 0;
+  padding: 6px;
+  box-sizing: border-box;
+
+  &:active {
+    transform: scale(0.93);
+  }
+}
+p {
+  color: rgb(139, 139, 139);
+}
+
+.signup_page {
+  display: flex;
+  flex-direction: row;
+
+  .signup_logo {
+    @include contentSize(inherit, 40%);
+    background: url("./userAuth_img/signup.png") no-repeat center;
+    background-size: 100% 100%;
+  }
+  .user_signup {
+    @include contentSize(80%, 60%);
+    @include display-prop(space-evenly, center, column);
+
+    .signup_content {
+      width: 90%;
+
+      h2 {
+        color: $brandColor;
+        margin: 7px;
+      }
+      p {
+        width: 100%;
+        min-width: 232px;
+        font-size: 0.8em;
+        color: rgb(104, 104, 104);
+        margin: 0;
+      }
+    }
+
+    .signup_input {
+      @include contentSize(272px, 90%);
+      min-width: 234px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+
+      form {
+        @include display-prop(space-evenly, center, column);
+        height: 90%;
+
+        .userAuth {
+          border: 2px solid $brandColor;
+          height: 37px;
+          width: 90%;
+          max-width: 453px;
+          border-radius: 6px;
+          padding-left: 12px;
+          box-sizing: border-box;
+
+          &::placeholder {
+            font-size: 0.8em;
+            font-weight: 600;
+            color: rgb(175, 175, 175);
+          }
+        }
+        button {
+          width: 183px;
+          border-radius: 8px;
+        }
+
+        .agreed_conditions {
+          p {
+            display: inline;
+            color: black;
+            margin-left: 10px;
+            font-size: 0.75em;
+
+            span {
+              color: $brandColor;
+            }
+          }
+        }
+      }
+
+      h6 {
+        font-weight: 100;
+        span {
+          font-weight: 800;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .signup_page {
+    border: 2px solid yellowgreen;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+
+    .signup_logo {
+      border: 2px solid;
+      height: 53vh;
+      width: 100%;
+    }
+
+    .signup_content {
+      p {
+        border: 2px solid;
+        min-width: 0 !important;
+      }
+    }
+  }
+}

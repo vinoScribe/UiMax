@@ -1,11 +1,10 @@
 import React from "react";
-import Content from "../commonComponentImage/content.png";
 
-const contentFeature = () => {
+const FeatureCards = ({ image, heading }) => {
   return (
     <div className="content_feature">
-      <img src={Content} alt="top feature icon" />
-      <h3>Content</h3>
+      <img src={image} alt="top feature icon" />
+      <h3>{heading}</h3>
       <p>
         Slate helps you see how many more days you need to work to reach your
         financial goal
@@ -15,4 +14,4 @@ const contentFeature = () => {
   );
 };
 
-export default contentFeature;
+export default FeatureCards;

@@ -47,6 +47,6 @@ const rootReducer = (state = { initialstate }, action: any) => {
   }
 };
 
-const productPriceStore = configureStore({ reducer: rootReducer });
+const ProductPriceStore = configureStore({ reducer: rootReducer });
 
-export default productPriceStore;
+export default ProductPriceStore;

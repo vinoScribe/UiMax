@@ -7,7 +7,7 @@ import Partner4 from "./aboutPageImg/partner4.png";
 import Partner5 from "./aboutPageImg/partner5.png";
 import Partner6 from "./aboutPageImg/partner6.png";
 
-const partners = () => {
+const Partners = () => {
   const partnerList: any[] = [
     Partner1,
     Partner2,
@@ -34,4 +34,4 @@ const partners = () => {
   );
 };
 
-export default partners;
+export default Partners;

@@ -1,7 +1,7 @@
 import React from "react";
 import "./blogStyle.scss";
 
-const blogPagination = () => {
+const BlogPagination = () => {
   return (
     <div className="pagination_blog">
       <ul>
@@ -17,4 +17,4 @@ const blogPagination = () => {
   );
 };
 
-export default blogPagination;
+export default BlogPagination;

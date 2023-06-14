@@ -1,7 +1,7 @@
 import React from "react";
 import "./aboutStyle.scss";
 
-const aboutWelcomePage = () => {
+const AboutWelcomePage = () => {
   return (
     <div className="aboutWelcomePage main_header">
       <div className="aboutWelcomePageContent">
@@ -21,4 +21,4 @@ const aboutWelcomePage = () => {
   );
 };
 
-export default aboutWelcomePage;
+export default AboutWelcomePage;

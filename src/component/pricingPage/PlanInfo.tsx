@@ -1,10 +1,8 @@
 import React from "react";
 import "./priceStyle.scss";
-import FreePlan from "./sub_plan_info/FreePlan";
-import StandardPlan from "./sub_plan_info/StandardPlan";
-import BusinessPlan from "./sub_plan_info/BusinessPlan";
 import { Provider } from "react-redux";
 import ProductPriceStore from "./storeManager/ProductPriceStore";
+import ModulePlan from "./sub_plan_info/ModulePlan";
 
 const PlanInfo = () => {
   return (
@@ -15,9 +13,7 @@ const PlanInfo = () => {
       </div>
       <div className="select_plan">
         <Provider store={ProductPriceStore}>
-          <FreePlan />
-          <StandardPlan />
-          <BusinessPlan />
+          <ModulePlan />
         </Provider>
       </div>
     </div>

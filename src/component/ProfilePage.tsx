@@ -4,6 +4,7 @@ import AuthorInfo from "./profilePage/profile/AuthorInfo";
 import BottomNavbar from "./profilePage/profile/BottomNavbar";
 import BodyPage from "./profilePage/bodyContent/BodyContent";
 import Footer from "./commonComponent/Footer";
+import "./profilePage.scss";
 
 function ProfilePage() {
   return (

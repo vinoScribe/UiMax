@@ -1,8 +1,9 @@
 import React from "react";
 import Header from "../commonComponent/Header";
 import Footer from "../commonComponent/Footer";
+import "./loginStyle.scss";
 
-const loginPage = () => {
+const LoginPage = () => {
   return (
     <>
       <Header />
@@ -33,4 +34,4 @@ const loginPage = () => {
   );
 };
 
-export default loginPage;
+export default LoginPage;

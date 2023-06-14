@@ -1,10 +1,8 @@
 import React from "react";
-import DesignFeature from "./topFeature/Design";
-import PerformanceFeature from "./topFeature/Performance";
-import ContentFeature from "./topFeature/Content";
+import FeatureCardImageModule from "./topFeature/FeatureCardImageModule";
 import "./commonComponentStyle.scss";
 
-const topFeatureIntheApp = () => {
+const TopFeatureIntheApp = () => {
   return (
     <div className="top_features_app">
       <div className="feature_content">
@@ -15,12 +13,10 @@ const topFeatureIntheApp = () => {
         </p>
       </div>
       <div className="amazing_feature_component">
-        <DesignFeature />
-        <PerformanceFeature />
-        <ContentFeature />
+        <FeatureCardImageModule />
       </div>
     </div>
   );
 };
 
-export default topFeatureIntheApp;
+export default TopFeatureIntheApp;

@@ -6,6 +6,7 @@ import feature_card3 from "./feature_card3.png";
 import feature_card4 from "./feature_card4.png";
 import feature_card5 from "./feature_card5.png";
 import feature_card6 from "./feature_card6.png";
+import "./authorBodyStyle.scss";
 
 const imageList = [
   feature_card1,
@@ -16,7 +17,7 @@ const imageList = [
   feature_card6,
 ];
 
-function ImageModule() {
+const ImageModule = () => {
   return (
     <div id="firstRow">
       {imageList.map((img, index) => {
@@ -24,6 +25,6 @@ function ImageModule() {
       })}
     </div>
   );
-}
+};
 
 export default ImageModule;

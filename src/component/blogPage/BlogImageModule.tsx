@@ -8,7 +8,7 @@ import Picture3 from "./blogpage_img/Picture-3.png";
 import Picture4 from "./blogpage_img/Picture-4.png";
 import Picture5 from "./blogpage_img/Picture-5.png";
 
-const blogImageModule = () => {
+const BlogImageModule = () => {
   const firstRowImgList = [
     Picture,
     Picture1,
@@ -27,4 +27,4 @@ const blogImageModule = () => {
   );
 };
 
-export default blogImageModule;
+export default BlogImageModule;

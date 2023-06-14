@@ -1,0 +1,113 @@
+$brandColor: rgba(32, 145, 249, 1);
+
+@mixin display-prop($justContent, $alingItems, $direction) {
+  display: flex;
+  justify-content: $justContent;
+  align-items: $alingItems;
+  flex-direction: $direction;
+}
+
+@mixin contentSize($hgt, $wdt) {
+  height: $hgt;
+  width: $wdt;
+}
+
+@mixin fontProp($size, $isBold) {
+  font-size: $size;
+  font-weight: $isBold;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.03em;
+  font-family: sans-serif;
+}
+
+////author body content
+.featureCard {
+  @include contentSize(fit-content, auto);
+  display: flex;
+  flex-direction: column;
+  margin: 57px 97px 97px 97px;
+  box-sizing: border-box;
+  min-width: 250px;
+
+  .card-heading {
+    @include display-prop(space-between, center, row);
+    @include contentSize(78px, 96%);
+    letter-spacing: 0.03em;
+    padding: 6px;
+    .learn-more {
+      @include contentSize(30px, auto);
+      text-align: end;
+      a {
+        @include fontProp(0.85em, bold);
+        text-decoration: none;
+        color: $brandColor;
+      }
+    }
+  }
+
+  .text-content {
+    @include display-prop(space-evenly, center, column);
+    @include contentSize(60%, fit-content);
+
+    p {
+      font-size: 14px;
+      width: 85%;
+      text-align: center;
+      line-height: 19px;
+    }
+
+    [type="button"] {
+      font-size: 0.73em;
+    }
+  }
+
+  .card-section {
+    @include contentSize(343px, 25%);
+    min-width: 230px;
+    border: 1px solid rgb(218, 218, 218);
+    box-shadow: 1px 1px 11px rgb(218, 218, 218);
+
+    img {
+      @include contentSize(40%, 100%);
+      box-sizing: border-box;
+      object-fit: cover;
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .featureCard {
+    justify-content: center;
+    align-items: center;
+    margin: 6%;
+    .card-section {
+      display: flex;
+      flex-direction: column;
+      width: 85%;
+      margin: 15px;
+    }
+    .card-heading {
+      flex-direction: column;
+      justify-content: space-between;
+      @include contentSize(123px, 176px);
+      text-align: center;
+
+      h2 {
+        font-size: 1.7rem;
+      }
+    }
+  }
+}
+
+////image module
+#firstRow {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 56px;
+  height: auto;
+  flex-wrap: wrap;
+}

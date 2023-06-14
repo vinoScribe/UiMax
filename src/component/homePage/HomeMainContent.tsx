@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../commonComponent/Header";
 import "./homeStyle.scss";
 
-const homeMainContent = () => {
+const HomeMainContent = () => {
   return (
     <div className="home_main">
       <Header />
@@ -19,4 +19,4 @@ const homeMainContent = () => {
   );
 };
 
-export default homeMainContent;
+export default HomeMainContent;

@@ -1,6 +1,7 @@
 import React from "react";
+import "./productStyle.scss";
 
-const aboutProductPage = () => {
+const AboutProductPage = () => {
   return (
     <div className="aboutProduct main_header">
       <div>
@@ -17,4 +18,4 @@ const aboutProductPage = () => {
   );
 };
 
-export default aboutProductPage;
+export default AboutProductPage;

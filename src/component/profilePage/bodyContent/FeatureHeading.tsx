@@ -1,7 +1,6 @@
 import React from "react";
-import "../../../style.scss";
 
-function FeatureHeading() {
+const FeatureHeading = () => {
   return (
     <div className="card-heading">
       <h2>Featured Posts</h2>
@@ -10,6 +9,6 @@ function FeatureHeading() {
       </div>
     </div>
   );
-}
+};
 
 export default FeatureHeading;

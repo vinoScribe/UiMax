@@ -2,7 +2,7 @@ import React from "react";
 import ImageModuleAbout from "./ImageModuleAbout";
 import "./aboutStyle.scss";
 
-const aboutBodyComponent = () => {
+const AboutBodyComponent = () => {
   return (
     <div className="aboutBodyComponent">
       <div className="title">
@@ -19,4 +19,4 @@ const aboutBodyComponent = () => {
   );
 };
 
-export default aboutBodyComponent;
+export default AboutBodyComponent;

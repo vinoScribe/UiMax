@@ -1,12 +1,12 @@
 import React from "react";
-import "../../../style.scss";
+import "./profileAuthorStyle.scss";
 
 function AuthorInfo() {
   return (
     <section>
       <img src="./images/profilePic.png" alt="" />
       <div className="author_info">
-        <h1 id="authorName">Silver Duck</h1>
+        <h1>Silver Duck</h1>
         <p>Virgin Islands (British)</p>
       </div>
       <p className="author_desc">

@@ -8,7 +8,7 @@ import PeopleResponse5 from "./aboutPageImg/Rectangle 7-4.png";
 import PeopleResponse6 from "./aboutPageImg/Rectangle 7-5.png";
 import ImageModuleCard from "./ImageModuleCard";
 
-const imageModuleAbout: any = () => {
+const ImageModuleAbout = () => {
   const people = [
     PeopleResponse1,
     PeopleResponse2,
@@ -27,4 +27,4 @@ const imageModuleAbout: any = () => {
   );
 };
 
-export default imageModuleAbout;
+export default ImageModuleAbout;

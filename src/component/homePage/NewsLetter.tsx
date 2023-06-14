@@ -1,7 +1,7 @@
 import React from "react";
 import "./homeStyle.scss";
 
-const newsLetter = () => {
+const NewsLetter = () => {
   return (
     <div className="news_letter_homepage">
       <div className="news_letter_headline">
@@ -22,4 +22,4 @@ const newsLetter = () => {
   );
 };
 
-export default newsLetter;
+export default NewsLetter;

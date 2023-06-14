@@ -1,7 +1,7 @@
 import React from "react";
 import "./commonComponentStyle.scss";
 
-const homePageComponentPoster = () => {
+const HomePageComponentPoster = () => {
   return (
     <div className="home_page_wallposter">
       <div id="home_page_component_poster" className="wallposter_home" />
@@ -18,4 +18,4 @@ const homePageComponentPoster = () => {
   );
 };
 
-export default homePageComponentPoster;
+export default HomePageComponentPoster;

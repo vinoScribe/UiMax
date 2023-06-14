@@ -5,22 +5,36 @@ $brandColor: rgba(32, 145, 249, 1);
   align-items: $alingItems;
   flex-direction: $direction;
 }
-
 @mixin contentSize($hgt, $wdt) {
   height: $hgt;
   width: $wdt;
 }
-
 @mixin fontProp($size, $isBold) {
   font-size: $size;
   font-weight: $isBold;
 }
-
 * {
   margin: 0;
   padding: 0;
   letter-spacing: 0.03em;
   font-family: sans-serif;
+}
+[type="button"] {
+  @include contentSize(42px, 92px);
+  @include fontProp(0.78em, bold);
+  background-color: $brandColor;
+  color: white;
+  border-radius: 5px;
+  border: 0;
+  padding: 6px;
+  box-sizing: border-box;
+
+  &:active {
+    transform: scale(0.93);
+  }
+}
+p {
+  color: rgb(139, 139, 139);
 }
 
 /////footer
@@ -84,6 +98,58 @@ header {
         background-size: contain;
       }
     }
+  }
+}
+
+nav {
+  width: 40%;
+  ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    li {
+      display: inline-block;
+      cursor: default;
+      a {
+        @include fontProp(0.95em, bold);
+        color: rgb(71, 71, 71);
+        text-decoration: none;
+
+        &:active {
+          color: rgb(184, 184, 184);
+        }
+      }
+    }
+  }
+}
+
+.input-bar {
+  display: flex;
+  align-items: flex-end;
+  height: 38px;
+  gap: 10px;
+  margin: 0 4px 0 4px;
+
+  input::placeholder {
+    @include fontProp(0.77em, bold);
+    color: rgb(167, 167, 167);
+  }
+
+  input[value] {
+    cursor: pointer;
+  }
+
+  input[type="email"] {
+    @include contentSize(90%, 163px);
+    background: rgb(242, 241, 241);
+    border-radius: 6px;
+    padding: 0 8px 0 11px;
+    border: 0;
+  }
+
+  input:focus {
+    border: 1px solid grey;
+    outline: none;
   }
 }
 
@@ -317,36 +383,65 @@ header {
     }
   }
 
-  .gorgeous_design_feature,
-  .performace_feature,
-  .content_feature {
-    @include display-prop(space-evenly, center, column);
-    @include contentSize(52vh, 239px);
-    padding: 6px;
-    border: 1px solid rgb(220, 220, 220);
-    box-shadow: 1px 6px 8px rgb(220, 220, 220);
-    border-radius: 6px;
-    box-sizing: border-box;
-
-    img {
-      @include contentSize(44px, 44px);
-      object-position: center;
-    }
-
-    p {
-      font-size: 0.89em;
-      line-height: 1.38em;
-      text-align: center;
-    }
-    a {
-      text-decoration: none;
-      color: $brandColor;
-    }
-  }
-
   .amazing_feature_component {
     @include contentSize(55vh, 100%);
     @include display-prop(space-evenly, center, row);
     gap: 6px;
+    box-sizing: border-box;
+
+    .img {
+      @include display-prop(space-evenly, center, row);
+      @include contentSize(95%, inherit);
+      gap: 7px;
+      box-sizing: inherit;
+
+      .content_feature {
+        @include contentSize(inherit, 254px);
+        @include display-prop(space-evenly, center, column);
+        border: 1px solid rgb(205, 205, 205);
+        border-radius: 8px;
+        box-shadow: 1px 5px 8px rgb(205, 205, 205);
+
+        img {
+          @include contentSize(53px, 53px);
+          object-fit: contain;
+          object-position: center;
+        }
+
+        h3,
+        p {
+          text-align: center;
+        }
+
+        p {
+          width: 75%;
+          font-size: 0.9em;
+          line-height: 1.4em;
+        }
+
+        a {
+          text-decoration: none;
+          color: $brandColor;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .top_features_app {
+    height: auto;
+    gap: 16px;
+    .amazing_feature_component {
+      height: auto;
+      gap: inherit;
+      .img {
+        flex-direction: column;
+        gap: inherit;
+        .content_feature {
+          height: 293px;
+        }
+      }
+    }
   }
 }

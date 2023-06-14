@@ -16,20 +16,13 @@ const reviewList = [
   Testimonial6,
 ];
 
-const review: any = () => {
+const Review = () => {
   return (
     <div className="public_opinion">
       <h2>People are diggin’ it</h2>
       <div className="img_src">
         {reviewList.map((review, index) => {
-          return (
-            <img
-              key={index}
-              src={review}
-              className="reviewSnapchat"
-              alt="public opinion"
-            />
-          );
+          return <img key={index} src={review} alt="public opinion" />;
         })}
       </div>
       <button type="button">More Testimonials</button>
@@ -37,4 +30,4 @@ const review: any = () => {
   );
 };
 
-export default review;
+export default Review;

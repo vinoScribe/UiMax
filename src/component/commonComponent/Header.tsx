@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import React from "react";
 import "./commonComponentStyle.scss";
 
-function Header() {
+const Header = () => {
   return (
     <header>
       <div className="official-log" />
@@ -34,6 +34,6 @@ function Header() {
       </div>
     </header>
   );
-}
+};
 
 export default Header;

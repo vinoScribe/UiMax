@@ -1,0 +1,137 @@
+$brandColor: rgba(32, 145, 249, 1);
+@mixin display-prop($justContent, $alingItems, $direction) {
+  display: flex;
+  justify-content: $justContent;
+  align-items: $alingItems;
+  flex-direction: $direction;
+}
+@mixin contentSize($hgt, $wdt) {
+  height: $hgt;
+  width: $wdt;
+}
+@mixin fontProp($size, $isBold) {
+  font-size: $size;
+  font-weight: $isBold;
+}
+* {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.03em;
+  font-family: sans-serif;
+}
+[type="button"] {
+  @include contentSize(42px, 92px);
+  @include fontProp(0.78em, bold);
+  background-color: $brandColor;
+  color: white;
+  border-radius: 5px;
+  border: 0;
+  padding: 6px;
+  box-sizing: border-box;
+
+  &:active {
+    transform: scale(0.93);
+  }
+}
+p {
+  color: rgb(139, 139, 139);
+}
+
+.login_page {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  .user_login {
+    @include contentSize(80%, 35%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 254px;
+    gap: 22px;
+
+    .login_content {
+      width: 90%;
+
+      h2 {
+        color: $brandColor;
+        margin: 7px;
+      }
+      p {
+        width: 100%;
+        min-width: 232px;
+        font-size: 0.8em;
+        color: rgb(104, 104, 104);
+        margin: 0;
+      }
+    }
+
+    .login_input {
+      @include contentSize(272px, 90%);
+      min-width: 234px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+
+      form {
+        @include display-prop(space-evenly, center, column);
+        height: 70%;
+        gap: 3px;
+
+        input {
+          border: 2px solid $brandColor;
+          height: 39px;
+          width: 90%;
+          border-radius: 6px;
+          padding-left: 12px;
+          box-sizing: border-box;
+
+          &::placeholder {
+            font-size: 0.8em;
+            font-weight: 600;
+            color: rgb(175, 175, 175);
+          }
+        }
+        button {
+          width: 90%;
+          border-radius: 8px;
+        }
+      }
+    }
+    h6 {
+      font-weight: 100;
+      span {
+        font-weight: 800;
+      }
+    }
+  }
+  .login_logo {
+    height: 90%;
+    width: 30%;
+    min-width: 209px;
+    background: url("./userAuth_img/iPhone_desk.png") no-repeat center;
+    background-size: contain;
+  }
+}
+
+@media (max-width: 480px) {
+  .login_page {
+    flex-direction: column;
+    height: auto;
+
+    .login_logo {
+      background: url("./userAuth_img/iPhone_mob.png") no-repeat center;
+      background-size: contain;
+      height: 65vh;
+    }
+  }
+}
+@media (width: 820px), (width: 768px), (width: 912px) {
+  .login_page {
+    .login_logo {
+      height: 50vh;
+      width: 50%;
+      align-self: flex-start;
+    }
+  }
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import "./aboutStyle.scss";
 
-const imageModuleCard = ({ image }) => {
+const ImageModuleCard = ({ image }) => {
   return (
     <div className="miniProfile">
       <div className="profile_photo">
@@ -16,4 +16,4 @@ const imageModuleCard = ({ image }) => {
   );
 };
 
-export default imageModuleCard;
+export default ImageModuleCard;

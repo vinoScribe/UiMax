@@ -10,7 +10,7 @@ import ProfilePage from "./component/ProfilePage";
 import BlogPage from "./component/BlogPage";
 import LoginPage from "./component/userPage/LoginPage";
 import SignupPage from "./component/userPage/SignupPage";
-import AboutPage from "./AboutPage";
+import AboutPage from "./component/AboutPage";
 
 const App = () => {
   return (

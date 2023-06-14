@@ -1,7 +1,7 @@
 import React from "react";
 import "./aboutStyle.scss";
 
-const miniSection = () => {
+const MiniSection = () => {
   return (
     <div className="miniSection_aboutPage">
       <div className="describe_img">
@@ -16,4 +16,4 @@ const miniSection = () => {
   );
 };
 
-export default miniSection;
+export default MiniSection;

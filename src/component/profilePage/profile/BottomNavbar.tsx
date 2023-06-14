@@ -1,4 +1,4 @@
-import "../../../style.scss";
+import "./profileAuthorStyle.scss";
 import React from "react";
 
 function BottomNavbar() {

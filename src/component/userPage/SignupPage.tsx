@@ -1,8 +1,9 @@
 import React from "react";
 import Header from "../commonComponent/Header";
 import Footer from "../commonComponent/Footer";
+import "./signupPage.scss";
 
-const signupPage = () => {
+const SignupPage = () => {
   return (
     <>
       <Header />
@@ -48,4 +49,4 @@ const signupPage = () => {
   );
 };
 
-export default signupPage;
+export default SignupPage;

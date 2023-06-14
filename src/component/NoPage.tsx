@@ -2,9 +2,10 @@ import React from "react";
 import HeaderNavbar from "./commonComponent/Header";
 import Footer from "./commonComponent/Footer";
 import ModularKit from "./commonComponent/ModularKit";
+import "./noPage.scss";
 
 const NoPage = () => {
-  function ErrorContent() {
+  const ErrorContent = () => {
     return (
       <div className="err_body">
         <p className="err_code">404</p>
@@ -18,7 +19,7 @@ const NoPage = () => {
         <div className="err_icon" />
       </div>
     );
-  }
+  };
   return (
     <div className="error_page">
       <HeaderNavbar />

@@ -1,7 +1,7 @@
 import React from "react";
 import "./priceStyle.scss";
 
-const frequentlyAskedQiestion = () => {
+const FrequentlyAskedQiestion = () => {
   return (
     <div className="FAQ">
       <h2>FAQ</h2>
@@ -26,4 +26,4 @@ const frequentlyAskedQiestion = () => {
   );
 };
 
-export default frequentlyAskedQiestion;
+export default FrequentlyAskedQiestion;

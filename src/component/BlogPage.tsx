@@ -6,7 +6,7 @@ import BlogImageModule from "./blogPage/BlogImageModule";
 import BlogPagination from "./blogPage/BlogPagination";
 import ModularKit from "./commonComponent/ModularKit";
 
-const blogPage = () => {
+const BlogPage = () => {
   return (
     <>
       <Header />
@@ -19,4 +19,4 @@ const blogPage = () => {
   );
 };
 
-export default blogPage;
+export default BlogPage;

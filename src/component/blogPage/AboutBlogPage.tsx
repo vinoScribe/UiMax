@@ -1,7 +1,7 @@
 import React from "react";
 import "./blogStyle.scss";
 
-const aboutBlogPage = () => {
+const AboutBlogPage = () => {
   return (
     <div className="aboutBlog main_header">
       <div>
@@ -15,4 +15,4 @@ const aboutBlogPage = () => {
   );
 };
 
-export default aboutBlogPage;
+export default AboutBlogPage;

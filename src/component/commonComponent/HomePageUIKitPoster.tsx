@@ -1,6 +1,6 @@
 import React from "react";
 
-const homePageUiKitPoster = () => {
+const HomePageUiKitPoster = () => {
   return (
     <div className="home_page_wallposter">
       <div className="wallposter_content left_side_content">
@@ -16,4 +16,4 @@ const homePageUiKitPoster = () => {
   );
 };
 
-export default homePageUiKitPoster;
+export default HomePageUiKitPoster;

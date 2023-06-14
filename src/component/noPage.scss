@@ -1,0 +1,65 @@
+$brandColor: rgba(32, 145, 249, 1);
+@mixin display-prop($justContent, $alingItems, $direction) {
+  display: flex;
+  justify-content: $justContent;
+  align-items: $alingItems;
+  flex-direction: $direction;
+}
+@mixin contentSize($hgt, $wdt) {
+  height: $hgt;
+  width: $wdt;
+}
+@mixin fontProp($size, $isBold) {
+  font-size: $size;
+  font-weight: $isBold;
+}
+* {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.03em;
+  font-family: sans-serif;
+}
+[type="button"] {
+  @include contentSize(42px, 92px);
+  @include fontProp(0.78em, bold);
+  background-color: $brandColor;
+  color: white;
+  border-radius: 5px;
+  border: 0;
+  padding: 6px;
+  box-sizing: border-box;
+
+  &:active {
+    transform: scale(0.93);
+  }
+}
+p {
+  color: rgb(139, 139, 139);
+}
+
+.err_body {
+  @include display-prop(space-evenly, center, column);
+  @include contentSize(83vh, 100%);
+  background: rgb(245, 245, 245);
+  box-sizing: border-box;
+
+  p {
+    width: 45%;
+    min-width: 230px;
+    font-size: small;
+    text-align: center;
+    line-height: 1.4em;
+    color: rgb(106, 106, 106);
+  }
+
+  .err_code,
+  h1 {
+    font-weight: 800;
+  }
+
+  .err_icon {
+    @include contentSize(43vh, 60%);
+    background: url("../../public/images/404.png") no-repeat center;
+    background-size: contain;
+  }
+}
