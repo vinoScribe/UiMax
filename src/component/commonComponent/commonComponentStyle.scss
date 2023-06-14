@@ -260,66 +260,6 @@ nav {
   }
 }
 
-////key feature
-.key_feature {
-  @include contentSize(63vh, 100%);
-  @include display-prop(space-evenly, center, row);
-  background-color: rgb(246, 246, 246);
-  flex-wrap: wrap;
-
-  #modular_kit_feature,
-  #handy_plugins_feature,
-  #speed_build_feature {
-    @include contentSize(auto, 21%);
-    min-width: 245px;
-    padding: 6px;
-    box-sizing: border-box;
-
-    h3 {
-      height: 34px;
-      margin: 0 0 12px 0;
-
-      span {
-        @include contentSize(inherit, 24%);
-        display: block;
-        float: left;
-        box-sizing: border-box;
-        position: relative;
-        bottom: 7px;
-      }
-
-      #modular_logo {
-        background: url("./commonComponentImage/ic_round-restaurant-menu.png")
-          no-repeat center;
-        background-size: contain;
-      }
-
-      #handy_logo {
-        background: url("./commonComponentImage/handly_plugins.png") no-repeat
-          center;
-        background-size: contain;
-      }
-      #speedy_logo {
-        background: url("./commonComponentImage/speedy_plugins.png") no-repeat
-          center;
-        background-size: contain;
-      }
-    }
-
-    p {
-      font-size: 0.9em;
-      line-height: 1.3em;
-    }
-  }
-}
-
-@media (max-width: 480px) {
-  .key_feature {
-    height: 78vh;
-    flex-direction: column;
-  }
-}
-
 ///modular kit
 
 .modular_kit {

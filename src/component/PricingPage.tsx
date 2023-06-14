@@ -4,9 +4,9 @@ import Footer from "./commonComponent/Footer";
 import AboutPricePage from "./pricingPage/AboutPricePage";
 import ModularKit from "./commonComponent/ModularKit";
 import PlanInfo from "./pricingPage/PlanInfo";
-import KeyFeature from "./commonComponent/KeyFeature";
 import FrequentlyAskedQiestion from "./pricingPage/FrequentlyAskedQuestion";
 import Review from "./pricingPage/Review";
+import KeyFeatureComponent from "./commonComponent/keyFeature/KeyFeatureComponent";
 
 const PricingPage = () => {
   return (
@@ -14,7 +14,7 @@ const PricingPage = () => {
       <HeaderNavbar />
       <AboutPricePage />
       <PlanInfo />
-      <KeyFeature />
+      <KeyFeatureComponent />
       <FrequentlyAskedQiestion />
       <Review />
       <ModularKit />
