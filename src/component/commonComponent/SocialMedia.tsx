@@ -2,7 +2,7 @@ import React from "react";
 import twitter from "./commonComponentImage/twitter.png";
 import facebook from "./commonComponentImage/facebook.png";
 import linkdln from "./commonComponentImage/linkdln.png";
-import "./commonComponentStyle.scss";
+import "./stylesheet/socialMedia.scss";
 
 const SocialMedia = () => {
   const imageSrc = [twitter, facebook, linkdln];

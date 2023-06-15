@@ -1,5 +1,5 @@
 import React from "react";
-import "./aboutStyle.scss";
+import "./stylesheet/miniSection.scss";
 
 const MiniSection = () => {
   return (

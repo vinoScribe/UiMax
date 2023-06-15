@@ -1,5 +1,5 @@
 import React from "react";
-import "./contactStyle.scss";
+import "./stylesheet/getInTouch.scss";
 import SocialMedia from "../commonComponent/SocialMedia";
 
 const GetInTouch = () => {

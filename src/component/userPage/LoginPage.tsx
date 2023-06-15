@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../commonComponent/Header";
 import Footer from "../commonComponent/Footer";
-import "./loginStyle.scss";
+import "./stylesheet/loginStyle.scss";
 
 const LoginPage = () => {
   return (

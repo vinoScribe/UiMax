@@ -1,5 +1,5 @@
 import React from "react";
-import "./aboutStyle.scss";
+import "./stylesheet/partner.scss";
 import Partner1 from "./aboutPageImg/partner1.png";
 import Partner2 from "./aboutPageImg/partner2.png";
 import Partner3 from "./aboutPageImg/partner3.png";

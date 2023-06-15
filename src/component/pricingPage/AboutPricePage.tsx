@@ -1,5 +1,5 @@
 import React from "react";
-import "./priceStyle.scss";
+import "./stylesheet/aboutPrice.scss";
 
 const AboutPricePage = () => {
   return (

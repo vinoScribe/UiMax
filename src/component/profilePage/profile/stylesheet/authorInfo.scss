@@ -1,0 +1,53 @@
+$brandColor: rgba(32, 145, 249, 1);
+@mixin display-prop($justContent, $alingItems, $direction) {
+  display: flex;
+  justify-content: $justContent;
+  align-items: $alingItems;
+  flex-direction: $direction;
+}
+@mixin contentSize($hgt, $wdt) {
+  height: $hgt;
+  width: $wdt;
+}
+@mixin fontProp($size, $isBold) {
+  font-size: $size;
+  font-weight: $isBold;
+}
+* {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.03em;
+  font-family: sans-serif;
+}
+
+p {
+  color: rgb(139, 139, 139);
+}
+
+section {
+  @include display-prop(space-evenly, center, column);
+  @include contentSize(78vh, 100%);
+  padding: 22px;
+  background: rgb(248, 248, 248);
+  text-align: center;
+  box-sizing: border-box;
+
+  img {
+    @include contentSize(183px, auto);
+    object-fit: contain;
+    margin: 19px;
+  }
+
+  .author_info {
+    line-height: 2.8em;
+    h1 {
+      font-size: 2.1em;
+    }
+  }
+
+  .author_desc {
+    width: 51%;
+    min-width: 214px;
+    line-height: 1.5em;
+  }
+}

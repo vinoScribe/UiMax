@@ -1,5 +1,5 @@
-import "./profileAuthorStyle.scss";
 import React from "react";
+import "./stylesheet/bottomNavBar.scss";
 
 function BottomNavbar() {
   return (

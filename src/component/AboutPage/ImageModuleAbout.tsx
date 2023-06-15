@@ -1,5 +1,5 @@
 import React from "react";
-import "./aboutStyle.scss";
+import "./stylesheet/aboutBodyComponent.scss";
 import PeopleResponse1 from "./aboutPageImg/Rectangle 7.png";
 import PeopleResponse2 from "./aboutPageImg/Rectangle 7-1.png";
 import PeopleResponse3 from "./aboutPageImg/Rectangle 7-2.png";

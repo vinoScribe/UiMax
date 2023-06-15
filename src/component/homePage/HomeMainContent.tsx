@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../commonComponent/Header";
-import "./homeStyle.scss";
+import "./stylesheet/homeMain.scss";
 
 const HomeMainContent = () => {
   return (

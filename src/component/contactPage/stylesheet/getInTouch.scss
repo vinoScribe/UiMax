@@ -1,0 +1,30 @@
+$brandColor: rgba(32, 145, 249, 1);
+@mixin display-prop($justContent, $alingItems, $direction) {
+  display: flex;
+  justify-content: $justContent;
+  align-items: $alingItems;
+  flex-direction: $direction;
+}
+* {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.03em;
+  font-family: sans-serif;
+}
+p {
+  color: rgb(139, 139, 139);
+}
+
+.getInTouch {
+  @include display-prop(space-evenly, center, column);
+  height: 51vh;
+  .about {
+    width: 31%;
+    min-width: 193px;
+    text-align: center;
+    line-height: 1.3rem;
+    h2 {
+      margin: 15px;
+    }
+  }
+}

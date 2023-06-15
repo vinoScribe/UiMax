@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "./commonComponentImage/logo.png";
 import SocialMedia from "./SocialMedia";
-import "./commonComponentStyle.scss";
+import "./stylesheet/footer.scss";
 
 function Footer() {
   return (

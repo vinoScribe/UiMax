@@ -1,5 +1,5 @@
 import React from "react";
-import "./priceStyle.scss";
+import "./stylesheet/publicReview.scss";
 import Testimonial1 from "./testimonials/Testimonial-style-(2).png";
 import Testimonial2 from "./testimonials/Testimonial-style-(3).png";
 import Testimonial3 from "./testimonials/Testimonial-style-(4).png";

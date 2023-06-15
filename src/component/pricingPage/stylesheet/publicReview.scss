@@ -1,0 +1,74 @@
+$brandColor: rgba(32, 145, 249, 1);
+@mixin display-prop($justContent, $alingItems, $direction) {
+  display: flex;
+  justify-content: $justContent;
+  align-items: $alingItems;
+  flex-direction: $direction;
+}
+@mixin contentSize($hgt, $wdt) {
+  height: $hgt;
+  width: $wdt;
+}
+@mixin fontProp($size, $isBold) {
+  font-size: $size;
+  font-weight: $isBold;
+}
+* {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.03em;
+  font-family: sans-serif;
+}
+[type="button"] {
+  @include contentSize(42px, 92px);
+  @include fontProp(0.78em, bold);
+  background-color: $brandColor;
+  color: white;
+  border-radius: 5px;
+  border: 0;
+  padding: 6px;
+  box-sizing: border-box;
+
+  &:active {
+    transform: scale(0.93);
+  }
+}
+p {
+  color: rgb(139, 139, 139);
+}
+
+.public_opinion {
+  @include display-prop(space-evenly, center, column);
+  @include contentSize(148vh, 100%);
+  box-sizing: border-box;
+
+  .img_src {
+    display: flex;
+    justify-content: center;
+    align-content: space-evenly;
+    flex-wrap: wrap;
+    height: 70%;
+    gap: 13px;
+    img {
+      @include contentSize(46%, 25%);
+      min-width: 280px;
+    }
+  }
+
+  button {
+    width: 193px;
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 890px) {
+  .public_opinion {
+    height: auto;
+
+    h2,
+    button {
+      text-align: center;
+      margin: 39px;
+    }
+  }
+}

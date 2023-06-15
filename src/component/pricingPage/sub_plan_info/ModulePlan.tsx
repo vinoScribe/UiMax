@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ModuleComponent from "./ModuleComponent";
-import "../priceStyle.scss";
+import "../stylesheet/publicReview.scss";
 import PlanInfo from "../PlanInfo";
 
 const ModulePlan = () => {

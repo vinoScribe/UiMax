@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../commonComponent/Header";
 import Footer from "../commonComponent/Footer";
-import "./signupPage.scss";
+import "./stylesheet/signupPage.scss";
 
 const SignupPage = () => {
   return (
@@ -33,7 +33,7 @@ const SignupPage = () => {
               <div className="agreed_conditions">
                 <input type="checkbox" />
                 <p>
-                  I Agree will all <span>conditions</span>
+                  I agree with all <span>conditions</span>
                 </p>
               </div>
               <button type="button">Sign up</button>

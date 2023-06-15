@@ -1,6 +1,6 @@
 import React from "react";
 import ImageModuleAbout from "./ImageModuleAbout";
-import "./aboutStyle.scss";
+import "./stylesheet/aboutBodyComponent.scss";
 
 const AboutBodyComponent = () => {
   return (

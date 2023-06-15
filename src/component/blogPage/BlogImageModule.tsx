@@ -1,6 +1,6 @@
 import React from "react";
 import FirstRowComponentOfTheBody from "./FirstRowComponentOfTheBody";
-import "./blogStyle.scss";
+import "./stylesheet/blogBody.scss";
 import Picture from "./blogpage_img/Picture.png";
 import Picture1 from "./blogpage_img/Picture-1.png";
 import Picture2 from "./blogpage_img/Picture-2.png";

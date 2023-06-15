@@ -39,16 +39,20 @@ p {
 
 .signup_page {
   display: flex;
-  flex-direction: row;
+  justify-content: space-evenly;
 
   .signup_logo {
     @include contentSize(inherit, 40%);
-    background: url("./userAuth_img/signup.png") no-repeat center;
+    background: url("../userAuth_img/signup.png") no-repeat center;
     background-size: 100% 100%;
   }
+
   .user_signup {
     @include contentSize(80%, 60%);
     @include display-prop(space-evenly, center, column);
+    padding: 12px;
+    text-align: center;
+    box-sizing: border-box;
 
     .signup_content {
       width: 90%;
@@ -62,7 +66,7 @@ p {
         min-width: 232px;
         font-size: 0.8em;
         color: rgb(104, 104, 104);
-        margin: 0;
+        line-height: 1.4em;
       }
     }
 
@@ -123,22 +127,16 @@ p {
 
 @media (max-width: 480px) {
   .signup_page {
-    border: 2px solid yellowgreen;
-    display: flex;
+    align-items: center;
     flex-direction: column;
     height: auto;
 
-    .signup_logo {
-      border: 2px solid;
-      height: 53vh;
-      width: 100%;
+    .user_signup {
+      width: 90%;
     }
 
-    .signup_content {
-      p {
-        border: 2px solid;
-        min-width: 0 !important;
-      }
+    .signup_logo {
+      @include contentSize(53vh, 100%);
     }
   }
 }

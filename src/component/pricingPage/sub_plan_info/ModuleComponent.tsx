@@ -1,5 +1,5 @@
 import React from "react";
-import "../priceStyle.scss";
+import "../stylesheet/publicReview.scss";
 
 const ModuleComponent = ({ type, price }) => {
   return (

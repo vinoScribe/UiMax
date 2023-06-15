@@ -1,5 +1,5 @@
 import React from "react";
-import "./homeStyle.scss";
+import "./stylesheet/newsLetter.scss";
 
 const NewsLetter = () => {
   return (

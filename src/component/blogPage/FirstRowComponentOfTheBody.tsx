@@ -1,5 +1,5 @@
 import React from "react";
-import "./blogStyle.scss";
+import "./stylesheet/blogBody.scss";
 
 const FirstRowComponentOfTheBody = ({ image }) => {
   return (

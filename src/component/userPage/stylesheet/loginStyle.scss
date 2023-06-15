@@ -39,30 +39,30 @@ p {
 
 .login_page {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
 
   .user_login {
-    @include contentSize(80%, 35%);
+    @include contentSize(80%, 45%);
     display: flex;
     flex-direction: column;
     align-items: center;
     min-width: 254px;
-    gap: 22px;
+    gap: 8px;
 
     .login_content {
       width: 90%;
+      text-align: center;
 
       h2 {
         color: $brandColor;
-        margin: 7px;
+        margin: 7px 0 36px 0;
       }
       p {
         width: 100%;
         min-width: 232px;
         font-size: 0.8em;
         color: rgb(104, 104, 104);
-        margin: 0;
+        line-height: 1.3em;
       }
     }
 
@@ -99,6 +99,7 @@ p {
       }
     }
     h6 {
+      text-align: center;
       font-weight: 100;
       span {
         font-weight: 800;
@@ -106,21 +107,22 @@ p {
     }
   }
   .login_logo {
-    height: 90%;
+    height: 80vh;
     width: 30%;
     min-width: 209px;
-    background: url("./userAuth_img/iPhone_desk.png") no-repeat center;
+    background: url("../userAuth_img/iPhone_desk.png") no-repeat center;
     background-size: contain;
   }
 }
 
 @media (max-width: 480px) {
   .login_page {
-    flex-direction: column;
     height: auto;
+    flex-direction: column;
+    align-items: center;
 
     .login_logo {
-      background: url("./userAuth_img/iPhone_mob.png") no-repeat center;
+      background: url("../userAuth_img/iPhone_mob.png") no-repeat center;
       background-size: contain;
       height: 65vh;
     }

@@ -1,6 +1,6 @@
 import React from "react";
 import FeatureCardImageModule from "./topFeature/FeatureCardImageModule";
-import "./commonComponentStyle.scss";
+import "./stylesheet/topFeatures.scss";
 
 const TopFeatureIntheApp = () => {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import "./profileAuthorStyle.scss";
+import "./stylesheet/authorInfo.scss";
 
 function AuthorInfo() {
   return (

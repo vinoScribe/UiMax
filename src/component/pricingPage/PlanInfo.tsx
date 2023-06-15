@@ -1,5 +1,5 @@
 import React from "react";
-import "./priceStyle.scss";
+import "./stylesheet/planInfo.scss";
 import { Provider } from "react-redux";
 import ProductPriceStore from "./storeManager/ProductPriceStore";
 import ModulePlan from "./sub_plan_info/ModulePlan";

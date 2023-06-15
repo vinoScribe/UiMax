@@ -1,5 +1,5 @@
 import React from "react";
-import "./commonComponentStyle.scss";
+import "./stylesheet/homePagePoster.scss";
 
 const HomePageComponentPoster = () => {
   return (

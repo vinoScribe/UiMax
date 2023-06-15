@@ -1,5 +1,5 @@
 import React from "react";
-import "./commonComponentStyle.scss";
+import "./stylesheet/modularKit.scss";
 
 const ModularKit = () => {
   return (

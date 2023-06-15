@@ -1,0 +1,65 @@
+$brandColor: rgba(32, 145, 249, 1);
+@mixin display-prop($justContent, $alingItems, $direction) {
+  display: flex;
+  justify-content: $justContent;
+  align-items: $alingItems;
+  flex-direction: $direction;
+}
+@mixin contentSize($hgt, $wdt) {
+  height: $hgt;
+  width: $wdt;
+}
+* {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.03em;
+  font-family: sans-serif;
+}
+p {
+  color: rgb(139, 139, 139);
+}
+
+.official_partner {
+  height: 58vh;
+  @include display-prop(space-evenly, center, column);
+
+  .content,
+  .official_partner_logo {
+    @include display-prop(space-evenly, center, row);
+  }
+
+  .content {
+    height: 40%;
+    flex-direction: column;
+    text-align: center;
+
+    p {
+      width: 37%;
+      min-width: 222px;
+      margin: 9px;
+      font-size: 0.9em;
+    }
+  }
+
+  .official_partner_logo {
+    @include contentSize(50%, 424px);
+    gap: 5px;
+
+    img {
+      @include contentSize(41px, 38px);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .official_partner {
+    height: auto;
+    .official_partner_logo {
+      flex-direction: column;
+      gap: 34px;
+      img {
+        @include contentSize(56px, 56px);
+      }
+    }
+  }
+}
