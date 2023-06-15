@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom";
 import React from "react";
 import "./stylesheet/header.scss";
+import MobileMenuBar from "../mobileMenuBar/MobileMenuBar";
+import $ from "jquery";
 
 const Header = () => {
+  const getMenubar = () => {
+    $(".mobileMenuBar").toggle();
+  };
+
   return (
     <header>
       <div className="official-log" />
@@ -29,8 +35,15 @@ const Header = () => {
       </div>
 
       <div className="mobile_version">
-        <button type="button">Login</button>
-        <div className="menu_bar_logo" />
+        <Link to="/LoginPage">
+          <button type="button" id="mobileLogin">
+            Login
+          </button>
+        </Link>
+
+        <div className="menu_bar_logo" onClick={getMenubar}>
+          {<MobileMenuBar />}
+        </div>
       </div>
     </header>
   );

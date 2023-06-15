@@ -1,22 +1,4 @@
-@mixin display-prop($justContent, $alingItems, $direction) {
-  display: flex;
-  justify-content: $justContent;
-  align-items: $alingItems;
-  flex-direction: $direction;
-}
-@mixin contentSize($hgt, $wdt) {
-  height: $hgt;
-  width: $wdt;
-}
-* {
-  margin: 0;
-  padding: 0;
-  letter-spacing: 0.03em;
-  font-family: sans-serif;
-}
-p {
-  color: rgb(139, 139, 139);
-}
+@import "../../../style.scss";
 
 .key_feature {
   @include contentSize(53vh, 100%);

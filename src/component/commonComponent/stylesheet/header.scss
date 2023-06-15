@@ -1,27 +1,4 @@
-$brandColor: rgba(32, 145, 249, 1);
-@mixin display-prop($justContent, $alingItems, $direction) {
-  display: flex;
-  justify-content: $justContent;
-  align-items: $alingItems;
-  flex-direction: $direction;
-}
-@mixin contentSize($hgt, $wdt) {
-  height: $hgt;
-  width: $wdt;
-}
-@mixin fontProp($size, $isBold) {
-  font-size: $size;
-  font-weight: $isBold;
-}
-* {
-  margin: 0;
-  padding: 0;
-  letter-spacing: 0.03em;
-  font-family: sans-serif;
-}
-p {
-  color: rgb(139, 139, 139);
-}
+@import "../../../style.scss";
 
 header {
   @include display-prop(space-around, baseline, row);
@@ -73,9 +50,11 @@ nav {
     display: flex;
     justify-content: space-around;
     padding: 0;
+    gap: 9px;
     li {
       display: inline-block;
       cursor: default;
+      font-size: 0.96em;
       a {
         @include fontProp(0.95em, bold);
         color: rgb(71, 71, 71);
@@ -111,6 +90,7 @@ nav {
     border-radius: 6px;
     padding: 0 8px 0 11px;
     border: 0;
+    box-sizing: border-box;
   }
 
   input:focus {

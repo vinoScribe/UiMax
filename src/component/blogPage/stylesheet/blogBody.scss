@@ -1,27 +1,4 @@
-$brandColor: rgba(32, 145, 249, 1);
-@mixin display-prop($justContent, $alingItems, $direction) {
-  display: flex;
-  justify-content: $justContent;
-  align-items: $alingItems;
-  flex-direction: $direction;
-}
-@mixin fontProp($size, $isBold) {
-  font-size: $size;
-  font-weight: $isBold;
-}
-@mixin contentSize($hgt, $wdt) {
-  height: $hgt;
-  width: $wdt;
-}
-* {
-  margin: 0;
-  padding: 0;
-  letter-spacing: 0.03em;
-  font-family: sans-serif;
-}
-p {
-  color: rgb(139, 139, 139);
-}
+@import "../../../style.scss";
 
 .blog_body_content {
   @include display-prop(space-evenly, center, row);

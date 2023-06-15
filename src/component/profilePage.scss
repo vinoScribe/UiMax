@@ -1,10 +1,4 @@
-@mixin contentSize($hgt, $wdt) {
-  height: $hgt;
-  width: $wdt;
-}
-p {
-  color: rgb(139, 139, 139);
-}
+@import "../style.scss";
 
 .profile_page {
   @include contentSize(100vh, 100%);

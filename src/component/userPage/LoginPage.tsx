@@ -2,6 +2,8 @@ import React from "react";
 import Header from "../commonComponent/Header";
 import Footer from "../commonComponent/Footer";
 import "./stylesheet/loginStyle.scss";
+import { Link } from "react-router-dom";
+import SignupPage from "./SignupPage";
 
 const LoginPage = () => {
   return (
@@ -23,7 +25,10 @@ const LoginPage = () => {
               <button type="button">Connection</button>
             </form>
             <h6>
-              Don't have an account? <span>Sign up here</span>
+              Don't have an account?{" "}
+              <span id="signup">
+                <Link to={"/SignupPage"}>Sign up here</Link>
+              </span>
             </h6>
           </div>
         </div>

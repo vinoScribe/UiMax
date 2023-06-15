@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../commonComponent/Header";
 import Footer from "../commonComponent/Footer";
 import "./stylesheet/signupPage.scss";
+import { Link } from "react-router-dom";
 
 const SignupPage = () => {
   return (
@@ -39,7 +40,10 @@ const SignupPage = () => {
               <button type="button">Sign up</button>
             </form>
             <h6>
-              Don't have an account? <span>Sign in here</span>
+              Already have an account?{" "}
+              <span id="signin">
+                <Link to="/LoginPage">Sign in here</Link>
+              </span>
             </h6>
           </div>
         </div>

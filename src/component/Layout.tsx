@@ -30,9 +30,6 @@ const Layout = () => {
           <li>
             <Link to="/SignupPage" />
           </li>
-          <li>
-            <Link to="/AboutPage" />
-          </li>
         </ul>
       </nav>
 
