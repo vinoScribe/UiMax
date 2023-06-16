@@ -1,15 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "../stylesheet/publicReview.scss";
 
-const ModuleComponent = ({ type, selectPremium }) => {
-  // const premium = type.price;
-  // const offer = premium - (premium * 20) / 100;
-  // const [monthlyPrem, setAnnualPrem] = useState(premium);
-
-  // const getAnnualPrem = () => {
-  //   setAnnualPrem(offer.toFixed(0));
-  // };
-
+const ModuleComponent = ({ type, selectPremium, getCycle }) => {
   const loadedFeature = (
     <div className="features_in_given_plan">
       <ul>
@@ -41,7 +33,7 @@ const ModuleComponent = ({ type, selectPremium }) => {
       <div className="cost_of_plan">
         <h1>{selectPremium}</h1>
         <h3>$</h3>
-        <p>Per {type.cycle[0]}</p>
+        <p>Per {getCycle}</p>
       </div>
 
       {loadedFeature}

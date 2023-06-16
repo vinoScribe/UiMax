@@ -2,10 +2,10 @@ import React from "react";
 import "../stylesheet/publicReview.scss";
 import PlanInfoStore from "./PlanInfoStore";
 
-const ModulePlan = ({ planUpdate }) => {
+const ModulePlan = ({ planUpdate, getCycle }) => {
   return (
     <div className="planType">
-      <PlanInfoStore getPlan={planUpdate} />
+      <PlanInfoStore getPlan={planUpdate} getCycle={getCycle} />
     </div>
   );
 };

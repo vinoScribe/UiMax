@@ -27,16 +27,16 @@ const initialState: DEFINE_INITIALSTATE[] = [
 const rootReducer = (state: any = initialState, action: any) => {
   switch (action.type) {
     case "MONTHLY_PREMIUM": {
-      return state.map((planInfo) => Number(planInfo.price));
+      return initialState.map((planInfo) => planInfo.price);
     }
     case "ANNUAL_PREMIUM": {
-      return state.map((planInfo) => {
-        const offerPrice = planInfo.price - (planInfo.price * 20) / 100;
-        return Number(offerPrice.toFixed(0));
+      return initialState.map((planInfo) => {
+        const offerPrice = planInfo.price * 12 - (planInfo.price * 20) / 100;
+        return offerPrice;
       });
     }
     default: {
-      return state;
+      return initialState.map((planInfo) => planInfo.price);
     }
   }
 };
