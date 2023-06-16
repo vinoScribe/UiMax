@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import "../stylesheet/publicReview.scss";
 
-const ModuleComponent = ({ type }) => {
-  const premium = type.price;
-  const offer = premium - (premium * 20) / 100;
-  const [monthlyPrem, setAnnualPrem] = useState(premium);
+const ModuleComponent = ({ type, selectPremium }) => {
+  // const premium = type.price;
+  // const offer = premium - (premium * 20) / 100;
+  // const [monthlyPrem, setAnnualPrem] = useState(premium);
 
-  const getAnnualPrem = () => {
-    setAnnualPrem(offer.toFixed(0));
-  };
+  // const getAnnualPrem = () => {
+  //   setAnnualPrem(offer.toFixed(0));
+  // };
 
   const loadedFeature = (
     <div className="features_in_given_plan">
@@ -39,7 +39,7 @@ const ModuleComponent = ({ type }) => {
         <p>Organize across all apps by hand</p>
       </div>
       <div className="cost_of_plan">
-        <h1 onClick={getAnnualPrem}>{monthlyPrem}</h1>
+        <h1>{selectPremium}</h1>
         <h3>$</h3>
         <p>Per {type.cycle[0]}</p>
       </div>

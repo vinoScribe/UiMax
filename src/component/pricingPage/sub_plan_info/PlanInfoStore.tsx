@@ -1,7 +1,7 @@
 import React from "react";
 import ModulePlanType from "./ModulePlanType";
 
-const PlanInfoStore = () => {
+const PlanInfoStore = ({ getPlan }) => {
   const planList = [
     {
       plan: "FREE",
@@ -22,7 +22,9 @@ const PlanInfoStore = () => {
   return (
     <>
       {planList.map((type, index) => {
-        return <ModulePlanType type={type} key={index} />;
+        return (
+          <ModulePlanType type={type} key={index} selectPremium={getPlan} />
+        );
       })}
     </>
   );

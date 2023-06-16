@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import "../stylesheet/publicReview.scss";
-import PlanInfoModule from "./PlanInfoStore";
+import PlanInfoStore from "./PlanInfoStore";
 
-const ModulePlan = () => {
+const ModulePlan = ({ planUpdate }) => {
   return (
     <div className="planType">
-      <PlanInfoModule />
+      <PlanInfoStore getPlan={planUpdate} />
     </div>
   );
 };

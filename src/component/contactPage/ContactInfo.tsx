@@ -13,7 +13,7 @@ const ContactInfo = () => {
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
           className="google_map_locationApi"
-        ></iframe>
+        />
       </div>
       <div className="physicalAddressDetails">
         <div className="logo">
