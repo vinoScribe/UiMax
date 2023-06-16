@@ -11,7 +11,6 @@ import BlogPage from "./component/BlogPage";
 import LoginPage from "./component/userPage/LoginPage";
 import SignupPage from "./component/userPage/SignupPage";
 import AboutPage from "./component/AboutPage";
-import MobileMenuBar from "./component/mobileMenuBar/MobileMenuBar";
 
 const App = () => {
   return (

@@ -61,25 +61,17 @@
 
 @media (max-width: 480px) {
   .top_features_app {
-    margin-top: 34px;
     height: auto;
+    margin-top: 34px;
+    gap: 16px;
     .amazing_feature_component {
       flex-direction: column;
       height: 179vh;
-    }
-    .feature_content {
-      width: 243px;
-    }
-  }
-}
-
-@media (max-width: 480px) {
-  .top_features_app {
-    height: auto;
-    gap: 16px;
-    .amazing_feature_component {
-      height: auto;
       gap: inherit;
+
+      .feature_content {
+        width: 243px;
+      }
       .img {
         flex-direction: column;
         gap: inherit;

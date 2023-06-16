@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../stylesheet/publicReview.scss";
 
 const ModuleComponent = ({ type, selectPremium, getCycle }) => {

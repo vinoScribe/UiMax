@@ -47,7 +47,6 @@
   "devDependencies": {
     "@babel/plugin-transform-typescript": "^7.22.3",
     "@types/file-loader": "^5.0.1",
-    "jquery": "^3.7.0",
     "react-router-dom": "^6.11.2"
   }
 }

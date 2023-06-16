@@ -2,12 +2,9 @@ import { Link } from "react-router-dom";
 import React from "react";
 import "./stylesheet/header.scss";
 import MobileMenuBar from "../mobileMenuBar/MobileMenuBar";
-import $ from "jquery";
 
 const Header = () => {
-  const getMenubar = () => {
-    $(".mobileMenuBar").toggle();
-  };
+  const getMenubar = () => {};
 
   return (
     <header>
