@@ -8,7 +8,7 @@ const Header = () => {
 
   return (
     <header>
-      <div className="official-log" />
+      <div className="brandLogo" />
       <nav>
         <ul>
           <li>
@@ -26,19 +26,19 @@ const Header = () => {
         </ul>
       </nav>
 
-      <div className="input-bar">
-        <input type="email" placeholder="Your Email" id="email_id" />
-        <input type="button" value="Subscribe" id="subscribe_btn" />
+      <div className="inputBar">
+        <input type="email" placeholder="Your Email" id="emailId" />
+        <input type="button" value="Subscribe" id="subscribeBtn" />
       </div>
 
-      <div className="mobile_version">
+      <div className="mobileVersion">
         <Link to="/LoginPage">
           <button type="button" id="mobileLogin">
             Login
           </button>
         </Link>
 
-        <div className="menu_bar_logo" onClick={getMenubar}>
+        <div className="menuBarOnMobile" onClick={getMenubar}>
           {<MobileMenuBar />}
         </div>
       </div>

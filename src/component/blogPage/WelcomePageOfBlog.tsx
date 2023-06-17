@@ -1,10 +1,10 @@
 import React from "react";
 import "./stylesheet/aboutBlog.scss";
 
-const AboutBlogPage = () => {
+const WelcomePageOfBlog = () => {
   return (
-    <div className="aboutBlog main_header">
-      <div>
+    <div className="blogWelcomePage">
+      <div className="contentOfWelcomePage">
         <h3>BLOG</h3>
         <h1>Get Insights.</h1>
       </div>
@@ -15,4 +15,4 @@ const AboutBlogPage = () => {
   );
 };
 
-export default AboutBlogPage;
+export default WelcomePageOfBlog;

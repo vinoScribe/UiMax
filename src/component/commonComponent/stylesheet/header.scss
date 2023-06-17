@@ -1,19 +1,18 @@
 @import "../../../style.scss";
 
 header {
-  @include display-prop(space-around, baseline, row);
+  @include flexProp(space-around, baseline, row);
   @include contentSize(61px, 100%);
   margin-bottom: 29px;
   box-sizing: border-box;
 
-  .official-log {
-    height: 45px;
-    width: 133px;
+  .brandLogo {
+    @include contentSize(45px, 133px);
     background: url("../commonComponentImage/logo.png") no-repeat center;
     background-size: contain;
   }
 
-  .mobile_version {
+  .mobileVersion {
     display: none;
   }
 }
@@ -21,18 +20,15 @@ header {
 @media (max-width: 640px) {
   header {
     nav,
-    .input-bar {
+    .inputBar,
+    button {
       display: none;
     }
 
-    .mobile_version {
+    .mobileVersion {
       display: inline-block;
 
-      button {
-        display: none;
-      }
-
-      .menu_bar_logo {
+      .menuBarOnMobile {
         @include contentSize(21px, 21px);
         display: inline-block;
         margin-left: 19px;
@@ -68,7 +64,7 @@ nav {
   }
 }
 
-.input-bar {
+.inputBar {
   display: flex;
   align-items: flex-end;
   height: 38px;

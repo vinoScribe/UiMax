@@ -1,10 +1,10 @@
 import React from "react";
 
-function CardComponents({ image }) {
+function FeatureCard({ image }) {
   return (
-    <div className="card-section">
-      <img src={image} alt="" />
-      <div className="text-content">
+    <div className="featureCardItem">
+      <img src={image} alt="card" />
+      <div className="cardContent">
         <h3>Full Time</h3>
         <p>
           Most calendars are designed for teams. Slate is designed for
@@ -16,4 +16,4 @@ function CardComponents({ image }) {
   );
 }
 
-export default CardComponents;
+export default FeatureCard;

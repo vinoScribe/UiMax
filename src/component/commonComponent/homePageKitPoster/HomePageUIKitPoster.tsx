@@ -1,9 +1,10 @@
 import React from "react";
+import "./homePagePoster.scss";
 
 const HomePageUiKitPoster = () => {
   return (
-    <div className="home_page_wallposter">
-      <div className="wallposter_content left_side_content">
+    <div className="homePageComponentKit">
+      <div className="wallposterContent leftSideContent">
         <h4>UI KIT</h4>
         <h2>Headings, body and other common text elements</h2>
         <p>
@@ -11,7 +12,7 @@ const HomePageUiKitPoster = () => {
           freelancers
         </p>
       </div>
-      <div id="home_page_UiKit_poster" className="wallposter_home" />
+      <div id="homePageUiKitPoster" className="wallposter" />
     </div>
   );
 };

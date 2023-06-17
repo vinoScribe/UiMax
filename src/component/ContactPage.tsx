@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "./commonComponent/Footer";
 import HeaderNavbar from "./commonComponent/Header";
-import AboutContactPage from "./contactPage/AboutContactPage";
+import ContactWelcomePage from "./contactPage/ContactWelcomePage";
 import WallposterContact from "./contactPage/WallposterContact";
 import GetInTouch from "./contactPage/GetInTouch";
 import ContactInfo from "./contactPage/ContactInfo";
@@ -12,7 +12,7 @@ const ContactPage = () => {
   return (
     <>
       <HeaderNavbar />
-      <AboutContactPage />
+      <ContactWelcomePage />
       <WallposterContact />
       <GetInTouch />
       <ContactInfo />

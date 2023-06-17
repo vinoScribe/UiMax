@@ -1,11 +1,11 @@
 import React from "react";
-import AboutWelcomePage from "./AboutPage/AboutWelcomePage";
+import AboutWelcomePage from "./aboutPage/AboutWelcomePage";
 import Header from "./commonComponent/Header";
 import Footer from "./commonComponent/Footer";
-import MiniSection from "./AboutPage/MiniSection";
+import MiniSection from "./aboutPage/MiniSection";
 import ModularKit from "./commonComponent/ModularKit";
-import AboutBodyComponent from "./AboutPage/AboutBodyComponent";
-import Partners from "./AboutPage/Partners";
+import AboutBodySection from "./aboutPage/AboutBodySection";
+import Partners from "./aboutPage/Partners";
 
 const AboutPage = () => {
   return (
@@ -14,7 +14,7 @@ const AboutPage = () => {
       <AboutWelcomePage />
       <MiniSection />
       <hr />
-      <AboutBodyComponent />
+      <AboutBodySection />
       <hr />
       <Partners />
       <ModularKit />

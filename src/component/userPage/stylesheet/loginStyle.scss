@@ -1,11 +1,12 @@
 @import "../../../style.scss";
 
-.login_page {
+.loginPage {
   display: flex;
   justify-content: space-evenly;
-  height: 69vh;
+  height: 71vh;
+  background: rgb(248, 248, 248, 1);
 
-  .user_login {
+  .userLogin {
     @include contentSize(80%, 45%);
     display: flex;
     flex-direction: column;
@@ -13,7 +14,7 @@
     min-width: 254px;
     gap: 8px;
 
-    .login_content {
+    .loginContent {
       width: 90%;
       text-align: center;
 
@@ -30,7 +31,7 @@
       }
     }
 
-    .login_input {
+    .loginInput {
       @include contentSize(272px, 90%);
       min-width: 234px;
       display: flex;
@@ -38,7 +39,7 @@
       justify-content: space-evenly;
 
       form {
-        @include display-prop(space-evenly, center, column);
+        @include flexProp(space-evenly, center, column);
         height: 70%;
         gap: 3px;
 
@@ -50,8 +51,7 @@
           box-sizing: border-box;
 
           &::placeholder {
-            font-size: 0.8em;
-            font-weight: 600;
+            @include fontProp(0.8em, 600);
             color: rgb(175, 175, 175);
           }
         }
@@ -78,7 +78,7 @@
       }
     }
   }
-  .login_logo {
+  .login_bg {
     @include contentSize(inherit, 30%);
     min-width: 209px;
     background: url("../userAuth_img/iPhone_desk.png") no-repeat center;
@@ -86,24 +86,25 @@
   }
 }
 
+@media (width: 912px), (width: 820px), (width: 768px) {
+  .loginPage {
+    .login_bg {
+      @include contentSize(50vh, 50%);
+      align-self: flex-start;
+    }
+  }
+}
+
 @media (max-width: 480px) {
-  .login_page {
+  .loginPage {
     height: auto;
     flex-direction: column;
     align-items: center;
 
-    .login_logo {
+    .login_bg {
       background: url("../userAuth_img/iPhone_mob.png") no-repeat center;
       background-size: contain;
       height: 65vh;
-    }
-  }
-}
-@media (width: 820px), (width: 768px), (width: 912px) {
-  .login_page {
-    .login_logo {
-      @include contentSize(50vh, 50%);
-      align-self: flex-start;
     }
   }
 }

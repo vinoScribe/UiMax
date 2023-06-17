@@ -1,7 +1,7 @@
 @import "../../../style.scss";
 
 .top_features_app {
-  @include display-prop(space-evenly, center, column);
+  @include flexProp(space-evenly, center, column);
   height: 93vh;
 
   .feature_content {
@@ -16,19 +16,19 @@
 
   .amazing_feature_component {
     @include contentSize(55vh, 100%);
-    @include display-prop(space-evenly, center, row);
+    @include flexProp(space-evenly, center, row);
     gap: 6px;
     box-sizing: border-box;
 
     .img {
-      @include display-prop(space-evenly, center, row);
+      @include flexProp(space-evenly, center, row);
       @include contentSize(95%, inherit);
       gap: 7px;
       box-sizing: inherit;
 
       .content_feature {
         @include contentSize(inherit, 254px);
-        @include display-prop(space-evenly, center, column);
+        @include flexProp(space-evenly, center, column);
         border: 1px solid rgb(205, 205, 205);
         border-radius: 8px;
         box-shadow: 1px 5px 8px rgb(205, 205, 205);

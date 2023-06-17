@@ -8,10 +8,11 @@ p {
   height: 140vh;
   display: flex;
   flex-direction: column;
+  background: rgb(248, 248, 248, 1);
 
   .aboutWelcomePageContent {
     @include contentSize(75vh, 100%);
-    @include display-prop(center, center, column);
+    @include flexProp(center, center, column);
     box-sizing: border-box;
 
     div {
@@ -42,21 +43,9 @@ p {
     }
   }
 
-  .aboutWelcomePage_imgsrc {
+  .aboutWelcomePage_bg {
     @include contentSize(50%, 100%);
     background: url("../aboutPageImg/Frame\ 39.png") no-repeat center;
     background-size: 100% 100%;
   }
 }
-
-// @media (max-width: 480px) {
-//   .aboutWelcomePage {
-//     .aboutWelcomePageContent {
-//       div {
-//         width: 123px;
-
-//         // @include contentSize(39vh, 224px);
-//       }
-//     }
-//   }
-// }

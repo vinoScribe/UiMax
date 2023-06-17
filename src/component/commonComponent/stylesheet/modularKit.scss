@@ -1,7 +1,7 @@
 @import "../../../style.scss";
 
 .modular_kit {
-  @include display-prop(space-evenly, center, column);
+  @include flexProp(space-evenly, center, column);
   background: rgba(37, 43, 66);
   height: 56vh;
   color: white;

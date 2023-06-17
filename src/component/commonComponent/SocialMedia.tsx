@@ -4,12 +4,13 @@ import facebook from "./commonComponentImage/facebook.png";
 import linkdln from "./commonComponentImage/linkdln.png";
 import "./stylesheet/socialMedia.scss";
 
-const SocialMedia = () => {
-  const imageSrc = [twitter, facebook, linkdln];
+const imageSrc = [twitter, facebook, linkdln];
+
+const SocialMedia = ({ image = imageSrc }) => {
   return (
-    <div className="social-media">
-      {imageSrc.map((img, index) => {
-        return <img src={img} key={index} alt="social media" />;
+    <div className="socialMedia">
+      {image.map((img, index) => {
+        return <img src={img} key={img[index]} alt="social media" />;
       })}
     </div>
   );

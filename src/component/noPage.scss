@@ -1,7 +1,7 @@
 @import "../style.scss";
 
-.err_body {
-  @include display-prop(space-evenly, center, column);
+.errBodyContent {
+  @include flexProp(space-evenly, center, column);
   @include contentSize(83vh, 100%);
   background: rgb(245, 245, 245);
   box-sizing: border-box;
@@ -15,12 +15,12 @@
     color: rgb(106, 106, 106);
   }
 
-  .err_code,
+  .errCode,
   h1 {
     font-weight: 800;
   }
 
-  .err_icon {
+  .errIcon {
     @include contentSize(43vh, 60%);
     background: url("../../public/images/404.png") no-repeat center;
     background-size: contain;

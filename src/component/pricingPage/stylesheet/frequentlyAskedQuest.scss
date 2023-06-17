@@ -1,7 +1,7 @@
 @import "../../../style.scss";
 
 .FAQ {
-  @include display-prop(space-evenly, center, column);
+  @include flexProp(space-evenly, center, column);
   @include contentSize(73vh, 100%);
   box-sizing: border-box;
   ul {

@@ -1,9 +1,9 @@
 @import "../../../style.scss";
 
 .getInTouch {
-  @include display-prop(space-evenly, center, column);
+  @include flexProp(space-evenly, center, column);
   height: 51vh;
-  .about {
+  .content {
     width: 31%;
     min-width: 193px;
     text-align: center;

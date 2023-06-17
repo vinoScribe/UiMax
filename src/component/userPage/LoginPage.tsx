@@ -8,16 +8,16 @@ const LoginPage = () => {
   return (
     <>
       <Header />
-      <div className="login_page main_header">
-        <div className="user_login">
-          <div className="login_content">
+      <div className="loginPage">
+        <div className="userLogin">
+          <div className="loginContent">
             <h2>Login</h2>
             <p>
               Most calendars are designed for teams. Slate is designed for
               freelancers
             </p>
           </div>
-          <div className="login_input">
+          <div className="loginInput">
             <form action="">
               <input type="text" placeholder="Your Email" />
               <input type="password" placeholder="Password" />
@@ -31,7 +31,7 @@ const LoginPage = () => {
             </h6>
           </div>
         </div>
-        <div className="login_logo" />
+        <div className="login_bg" />
       </div>
       <Footer />
     </>

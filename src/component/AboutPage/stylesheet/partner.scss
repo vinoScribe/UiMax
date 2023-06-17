@@ -2,11 +2,11 @@
 
 .official_partner {
   height: 58vh;
-  @include display-prop(space-evenly, center, column);
+  @include flexProp(space-evenly, center, column);
 
   .content,
   .official_partner_logo {
-    @include display-prop(space-evenly, center, row);
+    @include flexProp(space-evenly, center, row);
   }
 
   .content {

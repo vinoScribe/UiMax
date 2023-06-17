@@ -1,7 +1,7 @@
 @import "../../../style.scss";
 
-.home_main {
-  @include display-prop(space-around, center, column);
+.homeWelcomePage {
+  @include flexProp(space-around, center, column);
   @include contentSize(100vh, 100%);
   gap: 19px;
   background: url("../image/linearGr_bg.png") no-repeat center;
@@ -15,14 +15,15 @@
   }
 
   header {
-    .official-log {
+    .brandLogo {
+      @include contentSize(44px, 138px);
       background: url("../image/brand_logo.png") no-repeat center;
-      background-size: contain;
+      background-size: 100% 100%;
     }
   }
 
-  .about_home_main_content {
-    @include display-prop(space-evenly, center, column);
+  .homeContent {
+    @include flexProp(space-evenly, center, column);
     height: 56%;
     gap: 22px;
     text-align: center;
@@ -40,7 +41,7 @@
       border-radius: 9px;
     }
   }
-  .main_img {
+  .welcomePage_bg {
     @include contentSize(100%, 80%);
     min-width: 264px;
     background: url("../image/Desktop_Header_Light_-_1-removebg.png") no-repeat
@@ -56,14 +57,14 @@
 }
 
 @media (max-width: 640px) {
-  .home_main {
+  .homeWelcomePage {
     header {
-      .mobile_version {
+      .mobileVersion {
         button {
           display: inline-block;
         }
 
-        .menu_bar_logo {
+        .menuBarOnMobile {
           background: url("../../commonComponent/commonComponentImage/menu_bar_mob.png")
             no-repeat center;
           background-size: contain;

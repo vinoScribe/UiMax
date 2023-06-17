@@ -1,30 +1,20 @@
 @import "../../../style.scss";
 
-.blog_body_content {
-  @include display-prop(space-evenly, center, row);
+.blogBodyContent {
+  @include flexProp(space-evenly, center, row);
   @include contentSize(160vh, 100%);
   flex-wrap: wrap;
   box-sizing: border-box;
   padding: 23px;
   gap: 16px;
 
-  .first_rowOf_body {
-    @include contentSize(343px, 25%);
+  .miniArticle {
+    @include contentSize(373px, 25%);
     display: flex;
     flex-direction: column;
     box-shadow: 2px 4px 8px rgb(190, 190, 190);
 
-    ul {
-      display: flex;
-      li {
-        @include fontProp(0.8em, 600);
-        list-style: none;
-        margin-right: 12px;
-        color: $brandColor;
-        cursor: pointer;
-      }
-    }
-    .about_blog_img_src {
+    .contentOfArticleDesc {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -41,16 +31,29 @@
         line-height: 1.4em;
         height: 55px;
       }
+
+      ul {
+        display: flex;
+        flex-direction: row;
+
+        li {
+          @include fontProp(0.8em, 600);
+          list-style: none;
+          margin-right: 12px;
+          color: $brandColor;
+          cursor: pointer;
+        }
+      }
     }
   }
 }
 
 @media (max-width: 930px) {
-  .blog_body_content {
+  .blogBodyContent {
     height: auto;
     gap: 26px;
 
-    .first_rowOf_body {
+    .miniArticle {
       width: 241px;
       min-width: 0;
     }
@@ -58,29 +61,26 @@
 }
 
 @media (max-width: 850px) {
-  .blog_body_content {
-    .first_rowOf_body {
-      width: 211px;
-      height: 313px;
+  .blogBodyContent {
+    .miniArticle {
+      @include contentSize(313px, 211px);
     }
   }
 }
 
 @media (max-width: 770px) {
-  .blog_body_content {
-    .first_rowOf_body {
-      width: 252px;
-      height: 333px;
+  .blogBodyContent {
+    .miniArticle {
+      @include contentSize(252px, 333px);
     }
   }
 }
 
 @media (max-width: 600px) {
-  .blog_body_content {
-    .first_rowOf_body {
-      width: 51%;
+  .blogBodyContent {
+    .miniArticle {
+      @include contentSize(382px, 51%);
       min-width: 254px;
-      height: 382px;
     }
   }
 }

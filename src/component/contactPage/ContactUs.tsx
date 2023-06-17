@@ -7,29 +7,29 @@ const ContactUs = () => {
     email: "",
   });
 
+  const updateInputField = (propertyName) => (e) => {
+    setUser((initialState) => {
+      return { ...initialState, [propertyName]: e.target.value };
+    });
+  };
+  const updateUserName = updateInputField("name");
+  const updateUserEmail = updateInputField("email");
+
   return (
-    <div className="contactUs_container">
+    <div className="contactUsContainer">
       <form action="">
         <h3>Contact Us</h3>
         <input
           type="text"
           placeholder="Your Name"
           value={user.name}
-          onChange={(e) =>
-            setUser((lastState) => {
-              return { ...lastState, name: e.target.value };
-            })
-          }
+          onChange={updateUserName}
         />
         <input
           type="email"
           placeholder="Your Email"
           value={user.email}
-          onChange={(e) =>
-            setUser((lastState) => {
-              return { ...lastState, email: e.target.value };
-            })
-          }
+          onChange={updateUserEmail}
         />
         <textarea placeholder="Your Message" />
         <button type="button">Send</button>

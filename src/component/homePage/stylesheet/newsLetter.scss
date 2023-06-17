@@ -1,11 +1,11 @@
 @import "../../../style.scss";
 
-.news_letter_homepage {
+.newsLetter {
   @include contentSize(71vh, 100%);
-  @include display-prop(space-evenly, center, column);
+  @include flexProp(space-evenly, center, column);
   box-sizing: border-box;
 
-  .news_letter_headline {
+  .newsLetterHeadline {
     @include contentSize(63px, 193px);
     text-align: center;
     h2 {
@@ -16,14 +16,14 @@
       color: rgb(245, 117, 0);
     }
   }
-  .isInterested {
+  .subscribeContainer {
     @include contentSize(194px, 251px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
 
-    .subscribed_content {
+    .subscribeContent {
       p {
         font-size: 0.74em;
       }
@@ -33,13 +33,12 @@
     }
 
     form {
-      @include display-prop(space-evenly, center, column);
+      @include flexProp(space-evenly, center, column);
       height: 66%;
       padding: 6px;
 
       input {
-        height: 38px;
-        width: 100%;
+        @include contentSize(38px, 100%);
         border: 1px solid rgb(213, 213, 213);
         border-radius: 6px;
         padding-left: 12px;

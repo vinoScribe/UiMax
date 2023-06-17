@@ -7,8 +7,8 @@ import "./noPage.scss";
 const NoPage = () => {
   const ErrorContent = () => {
     return (
-      <div className="err_body">
-        <p className="err_code">404</p>
+      <div className="errBodyContent">
+        <p className="errCode">404</p>
         <h1>
           <span>Page</span> Not Found
         </h1>
@@ -16,17 +16,17 @@ const NoPage = () => {
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem
           accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.
         </p>
-        <div className="err_icon" />
+        <div className="errIcon" />
       </div>
     );
   };
   return (
-    <div className="error_page">
+    <>
       <HeaderNavbar />
       <ErrorContent />
       <ModularKit />
       <Footer />
-    </div>
+    </>
   );
 };
 

@@ -1,12 +1,12 @@
 @import "../../../style.scss";
 
-.aboutBodyComponent {
-  @include display-prop(space-around, center, column);
+.aboutBodySection {
+  @include flexProp(space-around, center, column);
   height: 188vh;
 
-  .title {
+  .titleOfBody {
     @include contentSize(18%, 40%);
-    @include display-prop(space-evenly, center, column);
+    @include flexProp(space-evenly, center, column);
     min-width: 225px;
     text-align: center;
     margin: 23px;
@@ -20,29 +20,29 @@
     }
   }
 
-  .peopleInterest {
+  .teamMembers {
     @include contentSize(70%, 90%);
-    @include display-prop(center, center, row);
+    @include flexProp(center, center, row);
 
-    .peopleResponseAbout {
+    section {
       @include contentSize(100%, 95%);
-      @include display-prop(space-evenly, center, row);
+      @include flexProp(space-evenly, center, row);
       flex-wrap: wrap;
       gap: 7px;
 
-      .miniProfile {
+      .teamMemberProfile {
         @include contentSize(54vh, 30%);
         min-width: 214px;
         box-sizing: border-box;
 
-        .profile_photo,
-        .profile_desc {
+        .profilePhoto,
+        .profileDesc {
           display: flex;
           align-items: center;
           box-sizing: border-box;
         }
 
-        .profile_photo {
+        .profilePhoto {
           @include contentSize(138px, 100%);
           justify-content: center;
 
@@ -51,7 +51,7 @@
           }
         }
 
-        .profile_desc {
+        .profileDesc {
           justify-content: space-evenly;
           flex-direction: column;
           height: 54%;
@@ -77,7 +77,7 @@
 }
 
 @media (max-width: 790px) {
-  .aboutBodyComponent {
+  .aboutBodySection {
     height: auto;
   }
 }

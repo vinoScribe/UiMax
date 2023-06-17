@@ -1,12 +1,12 @@
 @import "../../../style.scss";
 
-.aboutBlog {
-  @include display-prop(center, center, column);
+.blogWelcomePage {
+  @include flexProp(center, center, column);
   height: 88vh;
   line-height: 2.5rem;
   background: rgb(248, 248, 248);
 
-  div {
+  .contentOfWelcomePage {
     width: 280px;
     text-align: center;
 

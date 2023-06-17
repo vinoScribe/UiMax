@@ -2,7 +2,7 @@
 
 .key_feature {
   @include contentSize(53vh, 100%);
-  @include display-prop(space-evenly, center, row);
+  @include flexProp(space-evenly, center, row);
   flex-wrap: wrap;
   gap: 5px;
   box-sizing: border-box;

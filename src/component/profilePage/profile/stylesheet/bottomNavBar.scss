@@ -1,19 +1,19 @@
 @import "../../../../style.scss";
 
-@mixin bottom_navbar-position {
+@mixin bottomNavbarIconPosition {
   position: relative;
   right: 11px;
 }
 
-.bottom_navbar {
-  @include display-prop(space-evenly, center, row);
+.bottomNavbar {
+  @include flexProp(space-evenly, center, row);
   @include fontProp(0.9em, bold);
   height: 98px;
   margin: 1%;
 
-  .connect-with-me {
+  .connectWithMe {
     @include contentSize(100%, 31%);
-    @include display-prop(space-evenly, center, row);
+    @include flexProp(space-evenly, center, row);
     gap: 5px;
 
     [value="Message"] {
@@ -23,8 +23,9 @@
     }
   }
 
-  .foot_menu {
+  .footMenu {
     width: 57%;
+
     ul {
       display: flex;
       justify-content: space-evenly;
@@ -35,17 +36,17 @@
         display: inline-block;
         cursor: default;
 
-        &.home::before {
+        &:first-child::before {
           content: url("../image/home.png");
-          @include bottom_navbar-position;
+          @include bottomNavbarIconPosition;
         }
-        &.profile::before {
+        &:nth-child(2)::before {
           content: url("../image/profile.png");
-          @include bottom_navbar-position;
+          @include bottomNavbarIconPosition;
         }
-        &.community::before {
+        &:last-child:before {
           content: url("../image/community.png");
-          @include bottom_navbar-position;
+          @include bottomNavbarIconPosition;
         }
         &:active {
           color: $brandColor;
@@ -56,15 +57,15 @@
 }
 
 @media (max-width: 610px) {
-  .bottom_navbar {
+  .bottomNavbar {
     justify-content: center;
     flex-direction: column;
-    .foot_menu {
+    .footMenu {
       ul {
         display: none;
       }
     }
-    .connect-with-me {
+    .connectWithMe {
       width: 60%;
       min-width: 230px;
     }

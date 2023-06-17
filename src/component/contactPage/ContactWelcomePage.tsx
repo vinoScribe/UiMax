@@ -1,10 +1,10 @@
 import React from "react";
 import "./stylesheet/aboutContact.scss";
 
-const AboutContactPage = () => {
+const ContactWelcomePage = () => {
   return (
-    <div className="aboutContact main_header">
-      <div>
+    <div className="contactWelcomePage">
+      <div className="contentOfContact">
         <h3>CONTACT</h3>
         <h1>
           We’re here <span>to help</span>
@@ -17,4 +17,4 @@ const AboutContactPage = () => {
   );
 };
 
-export default AboutContactPage;
+export default ContactWelcomePage;

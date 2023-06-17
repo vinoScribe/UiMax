@@ -1,6 +1,6 @@
 @import "../../../style.scss";
 
-.featureCard {
+.featuresOfProfileBody {
   @include contentSize(fit-content, auto);
   display: flex;
   flex-direction: column;
@@ -8,14 +8,16 @@
   box-sizing: border-box;
   min-width: 250px;
 
-  .card-heading {
-    @include display-prop(space-between, center, row);
+  .featureBodyHeading {
+    @include flexProp(space-between, center, row);
     @include contentSize(78px, 96%);
     letter-spacing: 0.03em;
     padding: 6px;
-    .learn-more {
+
+    .learnMore {
       @include contentSize(30px, auto);
       text-align: end;
+
       a {
         @include fontProp(0.85em, bold);
         text-decoration: none;
@@ -24,23 +26,7 @@
     }
   }
 
-  .text-content {
-    @include display-prop(space-evenly, center, column);
-    @include contentSize(60%, fit-content);
-
-    p {
-      font-size: 14px;
-      width: 85%;
-      text-align: center;
-      line-height: 19px;
-    }
-
-    [type="button"] {
-      font-size: 0.73em;
-    }
-  }
-
-  .card-section {
+  .featureCardItem {
     @include contentSize(343px, 25%);
     min-width: 230px;
     border: 1px solid rgb(218, 218, 218);
@@ -51,21 +37,45 @@
       box-sizing: border-box;
       object-fit: cover;
     }
+
+    .cardContent {
+      @include flexProp(space-evenly, center, column);
+      @include contentSize(60%, fit-content);
+
+      p {
+        font-size: 14px;
+        width: 85%;
+        text-align: center;
+        line-height: 19px;
+      }
+
+      [type="button"] {
+        font-size: 0.73em;
+      }
+    }
   }
 }
 
+.cardContainer {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 56px;
+  height: auto;
+  flex-wrap: wrap;
+}
+
 @media (max-width: 680px) {
-  .featureCard {
+  .featuresOfProfileBody {
     justify-content: center;
     align-items: center;
     margin: 6%;
-    .card-section {
+    .featureCardItem {
       display: flex;
       flex-direction: column;
       width: 85%;
       margin: 15px;
     }
-    .card-heading {
+    .featureBodyHeading {
       flex-direction: column;
       justify-content: space-between;
       @include contentSize(123px, 176px);
@@ -76,13 +86,4 @@
       }
     }
   }
-}
-
-////image module
-#firstRow {
-  display: flex;
-  justify-content: space-evenly;
-  gap: 56px;
-  height: auto;
-  flex-wrap: wrap;
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import CardComponents from "./CardComponents";
+import FeatureCard from "./FeatureCard";
 import feature_card1 from "./feature_card1.png";
 import feature_card2 from "./feature_card2.png";
 import feature_card3 from "./feature_card3.png";
@@ -17,14 +17,14 @@ const imageList = [
   feature_card6,
 ];
 
-const ImageModule = () => {
+const FeatureCardContainer = ({ cardImage = imageList }) => {
   return (
-    <div id="firstRow">
-      {imageList.map((img, index) => {
-        return <CardComponents key={index} image={img} />;
+    <div className="cardContainer">
+      {cardImage.map((img) => {
+        return <FeatureCard image={img} />;
       })}
     </div>
   );
 };
 
-export default ImageModule;
+export default FeatureCardContainer;

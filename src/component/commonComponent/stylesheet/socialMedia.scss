@@ -1,7 +1,7 @@
 @import "../../../style.scss";
 
-.social-media {
-  @include display-prop(center, center, row);
+.socialMedia {
+  @include flexProp(center, center, row);
   @include contentSize(45px, 183px);
   gap: 19px;
 

@@ -3,8 +3,8 @@ import "./productStyle.scss";
 
 const AboutProductPage = () => {
   return (
-    <div className="aboutProduct main_header">
-      <div>
+    <div className="productWelcomePage">
+      <div className="content">
         <h3>PRODUCT</h3>
         <h1>
           A modular UI Kit for <span>quick deployment|</span>

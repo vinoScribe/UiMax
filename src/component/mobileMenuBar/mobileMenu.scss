@@ -13,7 +13,7 @@
 
   ul {
     @include contentSize(inherit, 100%);
-    @include display-prop(space-between, center, column);
+    @include flexProp(space-between, center, column);
 
     li {
       @include contentSize(43px, 100%);

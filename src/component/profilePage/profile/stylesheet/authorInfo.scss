@@ -1,7 +1,7 @@
 @import "../../../../style.scss";
 
-section {
-  @include display-prop(space-evenly, center, column);
+.authorDetails {
+  @include flexProp(space-evenly, center, column);
   @include contentSize(78vh, 100%);
   padding: 22px;
   background: rgb(248, 248, 248);
@@ -14,14 +14,14 @@ section {
     margin: 19px;
   }
 
-  .author_info {
+  .authorInfo {
     line-height: 2.8em;
     h1 {
       font-size: 2.1em;
     }
   }
 
-  .author_desc {
+  .authorDesc {
     width: 51%;
     min-width: 214px;
     line-height: 1.5em;

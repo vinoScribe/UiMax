@@ -8,17 +8,17 @@ const SignupPage = () => {
   return (
     <>
       <Header />
-      <div className="signup_page main_header">
-        <div className="signup_logo" />
-        <div className="user_signup">
-          <div className="signup_content">
+      <div className="signupPage">
+        <div className="signup_bg" />
+        <div className="userSignup">
+          <div className="signupContent">
             <h2>Register</h2>
             <p>
               Most calendars are designed for teams. Slate is designed for
               freelancers
             </p>
           </div>
-          <div className="signup_input">
+          <div className="signupInput">
             <form action="">
               <input
                 type="text"
@@ -31,7 +31,7 @@ const SignupPage = () => {
                 className="userAuth"
               />
 
-              <div className="agreed_conditions">
+              <div className="agreedConditions">
                 <input type="checkbox" />
                 <p>
                   I agree with all <span>conditions</span>

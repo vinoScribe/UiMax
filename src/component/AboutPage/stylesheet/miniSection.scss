@@ -1,11 +1,11 @@
 @import "../../../style.scss";
 
-.miniSection_aboutPage {
-  @include display-prop(center, center, row);
+section {
+  @include flexProp(center, center, row);
   height: 54vh;
   gap: 8px;
 
-  .describe_img {
+  .content {
     @include contentSize(35vh, 30%);
     min-width: 232px;
     display: flex;
@@ -19,7 +19,7 @@
     }
   }
 
-  .imgSrc {
+  .groupPhoto_bg {
     @include contentSize(42vh, 40%);
     min-width: 251px;
     background: url("../aboutPageImg/team.png") no-repeat center;
@@ -28,7 +28,7 @@
 }
 
 @media (max-width: 480px) {
-  .miniSection_aboutPage {
+  section {
     margin-top: 12px;
     flex-direction: column;
     height: auto;

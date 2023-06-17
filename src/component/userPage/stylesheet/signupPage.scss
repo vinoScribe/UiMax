@@ -1,26 +1,27 @@
 @import "../../../style.scss";
 
-.signup_page {
+.signupPage {
   @include contentSize(71vh, 100%);
   display: flex;
   justify-content: space-evenly;
   box-sizing: border-box;
+  background: rgb(248, 248, 248, 1);
 
-  .signup_logo {
-    align-self: center;
+  .signup_bg {
     @include contentSize(97%, 40%);
+    align-self: center;
     background: url("../userAuth_img/signup.png") no-repeat center;
     background-size: 100% 100%;
   }
 
-  .user_signup {
+  .userSignup {
     @include contentSize(80%, 60%);
-    @include display-prop(space-evenly, center, column);
+    @include flexProp(space-evenly, center, column);
     padding: 12px;
     text-align: center;
     box-sizing: border-box;
 
-    .signup_content {
+    .signupContent {
       width: 90%;
 
       h2 {
@@ -36,7 +37,7 @@
       }
     }
 
-    .signup_input {
+    .signupInput {
       @include contentSize(272px, 90%);
       min-width: 234px;
       display: flex;
@@ -44,7 +45,7 @@
       justify-content: space-evenly;
 
       form {
-        @include display-prop(space-evenly, center, column);
+        @include flexProp(space-evenly, center, column);
         height: 90%;
 
         .userAuth {
@@ -56,8 +57,7 @@
           border-radius: 6px;
 
           &::placeholder {
-            font-size: 0.8em;
-            font-weight: 600;
+            @include fontProp(0.8em, 600);
             color: rgb(175, 175, 175);
           }
         }
@@ -66,7 +66,7 @@
           border-radius: 8px;
         }
 
-        .agreed_conditions {
+        .agreedConditions {
           p {
             display: inline;
             color: black;
@@ -100,16 +100,16 @@
 }
 
 @media (max-width: 480px) {
-  .signup_page {
+  .signupPage {
     align-items: center;
     flex-direction: column;
     height: auto;
 
-    .user_signup {
+    .userSignup {
       width: 90%;
     }
 
-    .signup_logo {
+    .signup_bg {
       @include contentSize(53vh, 100%);
     }
   }

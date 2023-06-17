@@ -30,18 +30,18 @@
   }
 
   .select_plan {
-    @include display-prop(space-evenly, center, row);
+    @include flexProp(space-evenly, center, row);
     height: 80%;
     gap: 16px;
 
     .planType {
-      @include display-prop(space-evenly, center, row);
+      @include flexProp(space-evenly, center, row);
       width: 100%;
       height: 90%;
       gap: 12px;
 
       .planInfo_container {
-        @include display-prop(space-evenly, center, column);
+        @include flexProp(space-evenly, center, column);
         @include contentSize(413px, 21%);
         min-width: 223px;
         border: 2px solid $brandColor;

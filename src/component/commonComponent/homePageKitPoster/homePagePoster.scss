@@ -1,14 +1,10 @@
 @import "../../../style.scss";
 
-.home_page_wallposter {
-  @include display-prop(space-between, center, row);
+.homePageComponentKit {
+  @include flexProp(space-between, center, row);
   height: 73vh;
 
-  img {
-    @include contentSize(323px, 34%);
-    min-width: 270px;
-  }
-  .wallposter_content {
+  .wallposterContent {
     @include contentSize(auto, 42%);
     display: flex;
     flex-direction: column;
@@ -27,42 +23,42 @@
     }
   }
 
-  .left_side_content {
+  .leftSideContent {
     margin-left: 65px;
   }
 
-  .wallposter_home {
+  .wallposter {
     @include contentSize(323px, 34%);
     min-width: 270px;
   }
 
-  #home_page_component_poster {
+  #homePageComponent_bg {
     background: url("../commonComponentImage/components.png") no-repeat center;
     background-size: contain;
   }
-  #home_page_UiKit_poster {
+  #homePageUiKitPoster {
     background: url("../commonComponentImage/ui_kit.png") no-repeat center;
     background-size: contain;
   }
-  #home_page_component_poster_mob {
+  #homePageComponentMob_bg {
     display: none;
   }
-  #home_page_code_poster {
+  #homePageCodePoster {
     background: url("../commonComponentImage/code.png") no-repeat center;
     background-size: contain;
   }
 }
 
 @media (max-width: 480px) {
-  .home_page_wallposter {
+  .homePageComponentKit {
     flex-direction: column;
     height: 86vh;
 
-    .left_side_content {
+    .leftSideContent {
       margin: 0;
     }
 
-    .wallposter_content {
+    .wallposterContent {
       width: auto;
       align-items: center;
       margin: 13px;
@@ -72,21 +68,21 @@
       }
     }
 
-    #home_page_component_poster {
+    #homePageComponent_bg {
       display: none;
     }
 
-    #home_page_UiKit_poster {
+    #homePageUiKitPoster {
       background: url("../commonComponentImage/ui_mob.png") no-repeat center;
       background-size: contain;
     }
-    #home_page_component_poster_mob {
+    #homePageComponentMob_bg {
       display: block;
       background: url("../commonComponentImage/components_mob.png") no-repeat
         center;
       background-size: contain;
     }
-    #home_page_code_poster {
+    #homePageCodePoster {
       background: url("../commonComponentImage/code_mob.png") no-repeat center;
       background-size: contain;
     }

@@ -1,12 +1,13 @@
 @import "../../../style.scss";
 
-.contactUs_container {
+.contactUsContainer {
   display: flex;
   justify-content: center;
   height: 77vh;
   margin: 28px 0 10% 0;
+
   form {
-    @include display-prop(space-evenly, center, column);
+    @include flexProp(space-evenly, center, column);
     @include contentSize(inherit, 65%);
     border: 1px solid rgb(215, 215, 215);
     border-radius: 17px;
@@ -14,8 +15,7 @@
 
     input,
     textarea {
-      height: 41px;
-      width: 75%;
+      @include contentSize(41px, 75%);
       background-color: rgb(244, 244, 244);
       padding: 5px 0 0 15px;
       border: none;
@@ -26,8 +26,8 @@
       }
     }
     button {
-      border-radius: 6px;
       height: 38px;
+      border-radius: 6px;
     }
     textarea {
       height: 133px;
@@ -37,7 +37,7 @@
 }
 
 @media (max-width: 480px) {
-  .contactUs_container {
+  .contactUsContainer {
     form {
       width: 95%;
     }

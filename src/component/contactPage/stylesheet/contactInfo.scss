@@ -1,38 +1,38 @@
 @import "../../../style.scss";
 
-.physicalAddress {
+.contactInfo {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   text-align: center;
 
-  .physicalAddressDetails {
+  .addressContainer {
     height: 20%;
     display: flex;
     justify-content: space-evenly;
 
-    .logo {
-      @include contentSize(124px, 243px);
-      @include display-prop(space-evenly, center, column);
+    .addressDetail {
+      @include contentSize(98px, 243px);
+      @include flexProp(space-evenly, center, column);
       margin: 5px;
       font-size: small;
       color: black;
 
-      .contact_logo {
+      .contactLogo {
         @include contentSize(42px, 42px);
       }
 
-      #contact_home {
+      #contactHome {
         background: url("../image/bx_bx-map.png") no-repeat;
         background-size: contain;
       }
     }
-    #contact_number {
+    #contactNumber {
       background: url("../image/ic_baseline-phone-android.png") no-repeat;
       background-size: contain;
     }
-    #contact_mail {
+    #contactMail {
       background: url("../image/ant-design_mail-outlined.png") no-repeat;
       background-size: contain;
     }
@@ -47,16 +47,16 @@
 }
 
 @media (max-width: 480px) {
-  .google_map_locationApi {
+  .googleMapLocationApi {
     @include contentSize(283px, 100%);
     box-sizing: border-box;
   }
-  .physicalAddressDetails {
-    @include display-prop(space-evenly, center, column);
+  .addressContainer {
+    @include flexProp(space-evenly, center, column);
     height: 40% !important;
     margin: 23px;
   }
-  .logo {
+  .addressDetail {
     flex-direction: row !important;
     justify-content: space-between !important;
     gap: 5px;

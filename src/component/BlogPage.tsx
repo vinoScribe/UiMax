@@ -1,8 +1,8 @@
 import React from "react";
-import AboutBlogPage from "./blogPage/AboutBlogPage";
+import WelcomePageOfBlog from "./blogPage/WelcomePageOfBlog";
 import Header from "./commonComponent/Header";
 import Footer from "./commonComponent/Footer";
-import BlogImageModule from "./blogPage/BlogImageModule";
+import ArticlesImageModuleOfBlog from "./blogPage/ArticlesImageModuleOfBlog";
 import BlogPagination from "./blogPage/BlogPagination";
 import ModularKit from "./commonComponent/ModularKit";
 
@@ -10,8 +10,8 @@ const BlogPage = () => {
   return (
     <>
       <Header />
-      <AboutBlogPage />
-      <BlogImageModule />
+      <WelcomePageOfBlog />
+      <ArticlesImageModuleOfBlog />
       <BlogPagination />
       <ModularKit />
       <Footer />
