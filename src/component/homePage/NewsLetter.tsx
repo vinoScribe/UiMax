@@ -1,15 +1,15 @@
 import React from "react";
-import "./homeStyle.scss";
+import "./stylesheet/newsLetter.scss";
 
 const NewsLetter = () => {
   return (
-    <div className="news_letter_homepage">
-      <div className="news_letter_headline">
+    <div className="newsLetter">
+      <div className="newsLetterHeadline">
         <h4>At your fingertips</h4>
         <h2>Newsletter </h2>
       </div>
-      <div className="isInterested">
-        <div className="subscribed_content">
+      <div className="subscribeContainer">
+        <div className="subscribeContent">
           <h4>Subscribe to our Newsletter</h4>
           <p>Available exclusivery on Figmaland</p>
         </div>

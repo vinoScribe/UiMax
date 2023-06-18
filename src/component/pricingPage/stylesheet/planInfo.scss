@@ -1,0 +1,184 @@
+@import "../../../style.scss";
+
+.planInfo {
+  height: 115vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+  gap: 22px;
+
+  .togglePlan {
+    height: 33px;
+    margin-top: 54px;
+    text-align: center;
+
+    button {
+      @include contentSize(inherit, 123px);
+      border: 1px solid rgb(207, 207, 207);
+      border-radius: 2px;
+      box-shadow: 0 0 2px rgb(221, 221, 221);
+      margin: 0;
+      background: transparent;
+      color: $brandColor;
+
+      &:last-child {
+        width: 193px;
+        background: rgb(230, 230, 230);
+        color: rgb(189, 189, 189);
+      }
+    }
+  }
+
+  .planSelectionContainer {
+    @include flexProp(space-evenly, center, row);
+    height: 80%;
+    gap: 16px;
+
+    .planType {
+      @include flexProp(space-evenly, center, row);
+      width: 100%;
+      height: 90%;
+      gap: 12px;
+
+      .planInfoCard {
+        border: 2px solid red;
+        @include flexProp(space-evenly, center, column);
+        @include contentSize(413px, 21%);
+        min-width: 223px;
+        border: 2px solid $brandColor;
+        border-radius: 7px;
+        padding: 12px;
+
+        button {
+          width: 70%;
+        }
+
+        p,
+        li {
+          font-size: 0.9em;
+          margin: 6px 0 6px 0;
+        }
+
+        .costOfPlan {
+          width: 68%;
+          height: 41px;
+          display: grid;
+          color: $brandColor;
+          grid-template-columns: auto auto;
+
+          P {
+            @include fontProp(0.7em, bold);
+            margin: 0;
+            color: rgba(32, 145, 249, 0.5);
+          }
+          h1 {
+            grid-row: 1/3;
+            grid-column: 1/2;
+            padding-right: 11px;
+            font-size: 2.3em;
+            text-align: end;
+          }
+        }
+
+        ul {
+          li {
+            line-height: 1.4rem;
+            list-style: none;
+
+            &::before {
+              @include contentSize(24px, 24px);
+              content: "";
+              display: inline-block;
+              margin-right: 15px;
+              position: relative;
+              top: 4px;
+            }
+          }
+
+          .selected::before {
+            background: url("../sub_plan_info/image/selected.png") no-repeat;
+            background-size: contain;
+          }
+          .notSelected::before {
+            background: url("../sub_plan_info/image/notSelected.png") no-repeat;
+            background-size: contain;
+          }
+        }
+
+        &:nth-child(even) {
+          border: 0;
+          background: linear-gradient(
+            to top right,
+            rgba(0, 243, 185, 1),
+            rgba(33, 135, 255, 1)
+          );
+          p,
+          h1,
+          h3,
+          li,
+          div {
+            color: white !important;
+          }
+
+          button {
+            background: white;
+            color: $brandColor;
+          }
+
+          .selectedWithWhite::before {
+            background: url("../sub_plan_info/image/standardPlanSelector.png")
+              no-repeat;
+            background-size: contain;
+          }
+        }
+
+        &:last-child {
+          .fullySupported::before {
+            background: url("../sub_plan_info/image/selected.png") no-repeat;
+            background-size: contain;
+          }
+        }
+
+        .planHeader {
+          text-align: center;
+
+          p {
+            @include fontProp(0.84em, bold);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 785px) {
+  .planInfo {
+    .planSelectionContainer {
+      flex-direction: column;
+      .planType {
+        .planInfoCard {
+          width: 213px;
+          min-width: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .planInfo {
+    height: 285vh;
+    .planSelectionContainer {
+      flex-direction: column;
+      height: 100%;
+      .planType {
+        height: 100%;
+        flex-direction: column;
+        .planInfoCard {
+          width: 253px;
+        }
+      }
+    }
+  }
+}

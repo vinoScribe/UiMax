@@ -1,5 +1,5 @@
 import React from "react";
-import "./aboutStyle.scss";
+import "./stylesheet/partner.scss";
 import Partner1 from "./aboutPageImg/partner1.png";
 import Partner2 from "./aboutPageImg/partner2.png";
 import Partner3 from "./aboutPageImg/partner3.png";
@@ -18,7 +18,7 @@ const partnerList = [
 
 const Partners = () => {
   return (
-    <div className="official_partner">
+    <div className="officialPartner">
       <div className="content">
         <h2>Partners</h2>
         <p>
@@ -26,7 +26,7 @@ const Partners = () => {
           freelancers
         </p>
       </div>
-      <div className="official_partner_logo">
+      <div className="officialPartner_bg">
         {partnerList.map((imgSrc, index) => {
           return <img src={imgSrc} key={index} />;
         })}

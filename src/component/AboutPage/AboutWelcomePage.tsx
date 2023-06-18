@@ -1,9 +1,9 @@
 import React from "react";
-import "./aboutStyle.scss";
+import "./stylesheet/aboutWelcomepage.scss";
 
 const AboutWelcomePage = () => {
   return (
-    <div className="aboutWelcomePage main_header">
+    <div className="aboutWelcomePage">
       <div className="aboutWelcomePageContent">
         <div>
           <h3>ABOUT</h3>
@@ -16,7 +16,7 @@ const AboutWelcomePage = () => {
           freelancers
         </p>
       </div>
-      <div className="aboutWelcomePage_imgsrc" />
+      <div className="aboutWelcomePage_bg" />
     </div>
   );
 };

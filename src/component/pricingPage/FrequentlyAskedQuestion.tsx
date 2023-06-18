@@ -1,24 +1,26 @@
 import React from "react";
-import "./priceStyle.scss";
+import "./stylesheet/frequentlyAskedQuest.scss";
 
 const FrequentlyAskedQiestion = () => {
+  const listOfQuestions = [
+    "Design with real data",
+    "Start working faster today",
+    "Just type what's on your mind and we'll get you there.",
+    "Just type what's on your mind and we'll get you there.",
+    "Just type what's on your mind and we'll get you there.",
+    "Rename files and more. All without opening a single tab.",
+    "Design with real data",
+    "The best products start with Sketch",
+  ];
+
   return (
     <div className="FAQ">
       <h2>FAQ</h2>
-      <div className="left_side_FAQ">
+      <div className="questionContainer">
         <ul>
-          <li>Design with real data</li>
-          <li>Start working faster today</li>
-          <li>Just type what's on your mind and we'll get you there.</li>
-          <li>Just type what's on your mind and we'll get you there.</li>
-        </ul>
-      </div>
-      <div className="right_side_FAQ">
-        <ul>
-          <li>Just type what's on your mind and we'll get you there.</li>
-          <li>Rename files and more. All without opening a single tab.</li>
-          <li>Design with real data</li>
-          <li>The best products start with Sketch</li>
+          {listOfQuestions.map((question) => {
+            return <li>{question}</li>;
+          })}
         </ul>
       </div>
       <hr />

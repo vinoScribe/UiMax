@@ -1,0 +1,33 @@
+@import "../../../style.scss";
+
+.modularKit {
+  @include flexProp(space-evenly, center, column);
+  background: rgba(37, 43, 66);
+  height: 56vh;
+  color: white;
+  padding: 17px;
+  p {
+    @include contentSize(26%, 31%);
+    min-width: 193px;
+    display: grid;
+    padding: 5px;
+    text-align: center;
+    color: rgb(188, 188, 188);
+  }
+
+  .modularKit_btn {
+    width: 26%;
+    display: flex;
+    justify-content: center;
+    gap: 13px;
+    button {
+      min-width: 114px;
+      &:last-child {
+        width: 46%;
+        border: 1px solid white;
+        background: transparent;
+        color: white;
+      }
+    }
+  }
+}

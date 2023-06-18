@@ -1,0 +1,46 @@
+@import "../../../style.scss";
+
+.officialPartner {
+  height: 58vh;
+  @include flexProp(space-evenly, center, column);
+
+  .content,
+  .officialPartner_bg {
+    @include flexProp(space-evenly, center, row);
+  }
+
+  .content {
+    height: 40%;
+    flex-direction: column;
+    text-align: center;
+
+    p {
+      width: 37%;
+      min-width: 222px;
+      margin: 9px;
+      font-size: 0.9em;
+    }
+  }
+
+  .officialPartner_bg {
+    @include contentSize(50%, 424px);
+    gap: 5px;
+
+    img {
+      @include contentSize(41px, 38px);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .officialPartner {
+    height: auto;
+    .officialPartner_bg {
+      flex-direction: column;
+      gap: 34px;
+      img {
+        @include contentSize(56px, 56px);
+      }
+    }
+  }
+}

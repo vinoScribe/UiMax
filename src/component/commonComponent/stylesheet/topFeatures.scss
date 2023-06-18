@@ -1,0 +1,84 @@
+@import "../../../style.scss";
+
+.topFeaturesInTheApp {
+  @include flexProp(space-evenly, center, column);
+  height: 93vh;
+
+  .featureContent {
+    @include contentSize(auto, 310px);
+    text-align: center;
+
+    h2 {
+      margin: 6px 0 23px 0;
+      line-height: 1.3em;
+    }
+  }
+
+  .amazingFeatures {
+    @include contentSize(55vh, 100%);
+    @include flexProp(space-evenly, center, row);
+    gap: 6px;
+    box-sizing: border-box;
+
+    .img {
+      @include flexProp(space-evenly, center, row);
+      @include contentSize(95%, inherit);
+      gap: 7px;
+      box-sizing: inherit;
+
+      .contentFeature {
+        @include contentSize(inherit, 254px);
+        @include flexProp(space-evenly, center, column);
+        border: 1px solid rgb(205, 205, 205);
+        border-radius: 8px;
+        box-shadow: 1px 5px 8px rgb(205, 205, 205);
+
+        img {
+          @include contentSize(53px, 53px);
+          object-fit: contain;
+          object-position: center;
+        }
+
+        h3,
+        p {
+          text-align: center;
+        }
+
+        p {
+          width: 75%;
+          font-size: 0.9em;
+          line-height: 1.4em;
+        }
+
+        a {
+          text-decoration: none;
+          color: $brandColor;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .topFeaturesInTheApp {
+    height: auto;
+    margin-top: 34px;
+    gap: 16px;
+    .amazingFeatures {
+      flex-direction: column;
+      height: 179vh;
+      gap: inherit;
+
+      .featureContent {
+        width: 243px;
+      }
+      .img {
+        flex-direction: column;
+        gap: inherit;
+        .contentFeature {
+          height: 293px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@import "../../style.scss";
+
+.mobileMenuBar {
+  @include contentSize(33vh, 23vw);
+  min-width: 154px;
+  border: 2px solid;
+  border-radius: 6px;
+  background: rgb(234, 234, 234);
+  position: relative;
+  right: 87px;
+  top: 49px;
+  display: none;
+
+  ul {
+    @include contentSize(inherit, 100%);
+    @include flexProp(space-between, center, column);
+
+    li {
+      @include contentSize(43px, 100%);
+      list-style: none;
+      text-align: center;
+      box-sizing: border-box;
+      padding-top: 11px;
+
+      &:hover {
+        background: #000;
+      }
+
+      a {
+        text-decoration: none;
+        color: $brandColor;
+        font-size: 0.9em;
+
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+}

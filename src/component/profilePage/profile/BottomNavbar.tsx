@@ -1,22 +1,24 @@
-import "./profileAuthorStyle.scss";
 import React from "react";
+import "./stylesheet/bottomNavBar.scss";
 
-function BottomNavbar() {
+const profileMenuOnWelcomePage = ["Home", "Profile", "Community"];
+
+const BottomNavbar = ({ menuBar = profileMenuOnWelcomePage }) => {
   return (
-    <div className="bottom_navbar">
-      <div className="foot_menu">
+    <div className="bottomNavbar">
+      <div className="footMenu">
         <ul>
-          <li className="home">Home</li>
-          <li className="profile">Profile</li>
-          <li className="community">Community</li>
+          {menuBar.map((menu, index) => {
+            return <li key={menu[index]}>{menu}</li>;
+          })}
         </ul>
       </div>
-      <div className="connect-with-me">
+      <div className="connectWithMe">
         <input type="button" value="Follow" />
         <input type="button" value="Message" />
       </div>
     </div>
   );
-}
+};
 
 export default BottomNavbar;

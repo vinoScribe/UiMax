@@ -1,0 +1,13 @@
+@import "../../../style.scss";
+
+.socialMedia {
+  @include flexProp(center, center, row);
+  @include contentSize(45px, 183px);
+  gap: 19px;
+
+  img {
+    @include contentSize(32px, 32px);
+    object-fit: contain;
+    cursor: pointer;
+  }
+}

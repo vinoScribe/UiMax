@@ -1,21 +1,11 @@
-import React, { useState } from "react";
-import ModuleComponent from "./ModuleComponent";
-import "../priceStyle.scss";
-import PlanInfo from "../PlanInfo";
+import React from "react";
+import "../stylesheet/publicReview.scss";
+import PlanInfoStore from "./PlanInfoStore";
 
-const ModulePlan = () => {
-  const typeOfPlan = ["Free Plan", "Standard Plan", "Business Plan"];
-  const [price, setPrice] = useState([0, 10, 99]);
-
-  const updateToYearly = () => {
-    setPrice([0, 8, 80]);
-  };
-
+const ModulePlan = ({ planUpdate, getCycle }) => {
   return (
     <div className="planType">
-      {typeOfPlan.map((plan, index) => {
-        return <ModuleComponent type={plan} key={index} price={price[index]} />;
-      })}
+      <PlanInfoStore getPlan={planUpdate} getCycle={getCycle} />
     </div>
   );
 };

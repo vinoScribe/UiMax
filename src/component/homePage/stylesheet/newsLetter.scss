@@ -1,0 +1,56 @@
+@import "../../../style.scss";
+
+.newsLetter {
+  @include contentSize(71vh, 100%);
+  @include flexProp(space-evenly, center, column);
+  box-sizing: border-box;
+
+  .newsLetterHeadline {
+    @include contentSize(63px, 193px);
+    text-align: center;
+    h2 {
+      margin: 12px;
+      font-size: 1.7em;
+    }
+    h4 {
+      color: rgb(245, 117, 0);
+    }
+  }
+  .subscribeContainer {
+    @include contentSize(194px, 251px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+
+    .subscribeContent {
+      p {
+        font-size: 0.74em;
+      }
+      h4 {
+        margin-bottom: 9px;
+      }
+    }
+
+    form {
+      @include flexProp(space-evenly, center, column);
+      height: 66%;
+      padding: 6px;
+
+      input {
+        @include contentSize(38px, 100%);
+        border: 1px solid rgb(213, 213, 213);
+        border-radius: 6px;
+        padding-left: 12px;
+        box-sizing: border-box;
+
+        &::placeholder {
+          font-size: 0.8em;
+        }
+      }
+      button {
+        width: 100%;
+      }
+    }
+  }
+}

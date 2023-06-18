@@ -2,14 +2,25 @@ import React from "react";
 import twitter from "./commonComponentImage/twitter.png";
 import facebook from "./commonComponentImage/facebook.png";
 import linkdln from "./commonComponentImage/linkdln.png";
-import "./commonComponentStyle.scss";
+import "./stylesheet/socialMedia.scss";
+
+const socialMediaList = [
+  { id: 1, socialMedia_bg: twitter },
+  { id: 2, socialMedia_bg: facebook },
+  { id: 3, socialMedia_bg: linkdln },
+];
 
 const SocialMedia = () => {
-  const imageSrc = [twitter, facebook, linkdln];
   return (
-    <div className="social-media">
-      {imageSrc.map((img, index) => {
-        return <img src={img} key={index} alt="social media" />;
+    <div className="socialMedia">
+      {socialMediaList.map((details) => {
+        return (
+          <img
+            src={details.socialMedia_bg}
+            key={details.id}
+            alt="social media"
+          />
+        );
       })}
     </div>
   );

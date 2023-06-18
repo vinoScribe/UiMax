@@ -1,5 +1,5 @@
 import React from "react";
-import "./priceStyle.scss";
+import "./stylesheet/publicReview.scss";
 import Testimonial1 from "./testimonials/Testimonial-style-(2).png";
 import Testimonial2 from "./testimonials/Testimonial-style-(3).png";
 import Testimonial3 from "./testimonials/Testimonial-style-(4).png";
@@ -18,9 +18,9 @@ const reviewList = [
 
 const Review = () => {
   return (
-    <div className="public_opinion">
+    <div className="publicFeedback">
       <h2>People are diggin’ it</h2>
-      <div className="img_src">
+      <div className="feedbackerProfile">
         {reviewList.map((review, index) => {
           return <img key={index} src={review} alt="public opinion" />;
         })}

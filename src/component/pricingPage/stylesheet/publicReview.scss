@@ -1,0 +1,37 @@
+@import "../../../style.scss";
+
+.publicFeedback {
+  @include flexProp(space-evenly, center, column);
+  @include contentSize(148vh, 100%);
+  box-sizing: border-box;
+
+  .feedbackerProfile {
+    display: flex;
+    justify-content: center;
+    align-content: space-evenly;
+    flex-wrap: wrap;
+    height: 70%;
+    gap: 13px;
+    img {
+      @include contentSize(46%, 25%);
+      min-width: 280px;
+    }
+  }
+
+  button {
+    width: 193px;
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 890px) {
+  .publicFeedback {
+    height: auto;
+
+    h2,
+    button {
+      text-align: center;
+      margin: 39px;
+    }
+  }
+}

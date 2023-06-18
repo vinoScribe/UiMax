@@ -1,0 +1,46 @@
+$brandColor: rgba(32, 145, 249, 1);
+
+* {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.03em;
+  font-family: sans-serif;
+}
+
+@mixin flexProp($justContent, $alignItems, $direction) {
+  display: flex;
+  justify-content: $justContent;
+  align-items: $alignItems;
+  flex-direction: $direction;
+}
+
+@mixin contentSize($hgt, $wdt) {
+  height: $hgt;
+  width: $wdt;
+}
+
+@mixin fontProp($size, $bold) {
+  font-size: $size;
+  font-weight: $bold;
+}
+
+[type="button"],
+button {
+  @include contentSize(39px, 92px);
+  @include fontProp(0.78em, bold);
+  background-color: $brandColor;
+  color: white;
+  border-radius: 5px;
+  border: 0;
+  padding: 6px;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &:active {
+    transform: scale(0.93);
+  }
+}
+
+p {
+  color: rgb(139, 139, 139);
+}

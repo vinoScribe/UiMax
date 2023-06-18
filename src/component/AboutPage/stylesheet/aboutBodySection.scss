@@ -1,0 +1,83 @@
+@import "../../../style.scss";
+
+.aboutBodySection {
+  @include flexProp(space-around, center, column);
+  height: 188vh;
+
+  .titleOfBody {
+    @include contentSize(18%, 40%);
+    @include flexProp(space-evenly, center, column);
+    min-width: 225px;
+    text-align: center;
+    margin: 23px;
+
+    p {
+      width: 80%;
+      min-width: 234px;
+      margin-top: 12px;
+      line-height: 1.3em;
+      font-size: 0.9em;
+    }
+  }
+
+  .teamMembers {
+    @include contentSize(70%, 90%);
+    @include flexProp(center, center, row);
+
+    section {
+      @include contentSize(100%, 95%);
+      @include flexProp(space-evenly, center, row);
+      flex-wrap: wrap;
+      gap: 7px;
+
+      .teamMemberProfile {
+        @include contentSize(54vh, 30%);
+        min-width: 214px;
+        box-sizing: border-box;
+
+        .profilePhoto,
+        .profileDesc {
+          display: flex;
+          align-items: center;
+          box-sizing: border-box;
+        }
+
+        .profilePhoto {
+          @include contentSize(138px, 100%);
+          justify-content: center;
+
+          img {
+            height: 117px;
+          }
+        }
+
+        .profileDesc {
+          justify-content: space-evenly;
+          flex-direction: column;
+          height: 54%;
+
+          h3 {
+            color: $brandColor;
+          }
+
+          h5 {
+            color: rgb(109, 109, 109);
+          }
+
+          p {
+            text-align: center;
+            width: 70%;
+            font-size: 0.9em;
+            line-height: 1.3em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 790px) {
+  .aboutBodySection {
+    height: auto;
+  }
+}

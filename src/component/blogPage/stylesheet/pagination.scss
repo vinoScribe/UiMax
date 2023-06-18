@@ -1,0 +1,47 @@
+@import "../../../style.scss";
+
+.pagination {
+  @include contentSize(21vh, 100%);
+  @include flexProp(center, center, row);
+  box-sizing: border-box;
+  text-align: center;
+
+  ul {
+    @include contentSize(50%, 40vw);
+    @include flexProp(center, center, row);
+    min-width: 267px;
+    box-sizing: border-box;
+    border: 1px solid;
+    border-radius: 4px;
+    box-shadow: 2px 2px 6px rgb(212, 212, 212);
+
+    li {
+      @include contentSize(100%, 5vw);
+      @include flexProp(center, center, row);
+      min-width: 32px;
+      color: $brandColor;
+      list-style: none;
+      box-sizing: border-box;
+      cursor: pointer;
+    }
+
+    .previousNav,
+    .nextNav {
+      width: 8vw;
+      min-width: 52px;
+      background: rgb(234, 234, 234);
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    .previousNav {
+      border-right: 1px solid black;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    .nextNav {
+      border-left: 1px solid black;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import "../../../../style.scss";
+
+.authorDetails {
+  @include flexProp(space-evenly, center, column);
+  @include contentSize(78vh, 100%);
+  padding: 22px;
+  background: rgb(248, 248, 248);
+  text-align: center;
+  box-sizing: border-box;
+
+  img {
+    @include contentSize(183px, auto);
+    object-fit: contain;
+    margin: 19px;
+  }
+
+  .authorInfo {
+    line-height: 2.8em;
+    h1 {
+      font-size: 2.1em;
+    }
+  }
+
+  .authorDesc {
+    width: 51%;
+    min-width: 214px;
+    line-height: 1.5em;
+  }
+}

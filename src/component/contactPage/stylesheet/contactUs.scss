@@ -1,0 +1,45 @@
+@import "../../../style.scss";
+
+.contactUsContainer {
+  display: flex;
+  justify-content: center;
+  height: 77vh;
+  margin: 28px 0 10% 0;
+
+  form {
+    @include flexProp(space-evenly, center, column);
+    @include contentSize(inherit, 65%);
+    border: 1px solid rgb(215, 215, 215);
+    border-radius: 17px;
+    box-shadow: 1px 4px 6px rgb(230, 230, 230);
+
+    input,
+    textarea {
+      @include contentSize(41px, 75%);
+      background-color: rgb(244, 244, 244);
+      padding: 5px 0 0 15px;
+      border: none;
+      border-radius: 6px;
+
+      &:focus {
+        outline: 1px solid;
+      }
+    }
+    button {
+      height: 38px;
+      border-radius: 6px;
+    }
+    textarea {
+      height: 133px;
+      padding-top: 18px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .contactUsContainer {
+    form {
+      width: 95%;
+    }
+  }
+}

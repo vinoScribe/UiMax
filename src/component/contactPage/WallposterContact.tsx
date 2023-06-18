@@ -1,5 +1,5 @@
 import React from "react";
-import wallposterContact from "./wallposterContact.png";
+import wallposterContact from "./image/wallposterContact.png";
 
 const WallposterContact = () => {
   return (

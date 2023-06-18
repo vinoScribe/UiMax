@@ -1,0 +1,64 @@
+@import "../../../style.scss";
+
+.contactInfo {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+
+  .addressContainer {
+    height: 20%;
+    display: flex;
+    justify-content: space-evenly;
+
+    .addressDetail {
+      @include contentSize(98px, 243px);
+      @include flexProp(space-evenly, center, column);
+      margin: 5px;
+      font-size: small;
+      color: black;
+
+      .contactLogo {
+        @include contentSize(42px, 42px);
+      }
+
+      #contactHome {
+        background: url("../image/bx_bx-map.png") no-repeat;
+        background-size: contain;
+      }
+    }
+    #contactNumber {
+      background: url("../image/ic_baseline-phone-android.png") no-repeat;
+      background-size: contain;
+    }
+    #contactMail {
+      background: url("../image/ant-design_mail-outlined.png") no-repeat;
+      background-size: contain;
+    }
+    p {
+      width: 80%;
+      padding: 6px;
+      font-size: small;
+      color: rgb(100, 100, 100);
+      line-height: 1.1rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .googleMapLocationApi {
+    @include contentSize(283px, 100%);
+    box-sizing: border-box;
+  }
+  .addressContainer {
+    @include flexProp(space-evenly, center, column);
+    height: 40% !important;
+    margin: 23px;
+  }
+  .addressDetail {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    gap: 5px;
+  }
+}

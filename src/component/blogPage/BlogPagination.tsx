@@ -1,17 +1,17 @@
 import React from "react";
-import "./blogStyle.scss";
+import "./stylesheet/pagination.scss";
 
 const BlogPagination = () => {
   return (
-    <div className="pagination_blog">
+    <div className="pagination">
       <ul>
-        <li className="previous_nav">First</li>
+        <li className="previousNav">First</li>
         <li>1</li>
         <li>2</li>
         <li>3</li>
         <li>4</li>
         <li>5</li>
-        <li className="next_nav">Last</li>
+        <li className="nextNav">Last</li>
       </ul>
     </div>
   );

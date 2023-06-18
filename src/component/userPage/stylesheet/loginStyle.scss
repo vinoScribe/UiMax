@@ -1,0 +1,110 @@
+@import "../../../style.scss";
+
+.loginPage {
+  display: flex;
+  justify-content: space-evenly;
+  height: 71vh;
+  background: rgb(248, 248, 248, 1);
+
+  .userLogin {
+    @include contentSize(80%, 45%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 254px;
+    gap: 8px;
+
+    .loginContent {
+      width: 90%;
+      text-align: center;
+
+      h2 {
+        color: $brandColor;
+        margin: 7px 0 36px 0;
+      }
+      p {
+        width: 100%;
+        min-width: 232px;
+        font-size: 0.8em;
+        color: rgb(104, 104, 104);
+        line-height: 1.3em;
+      }
+    }
+
+    .loginInput {
+      @include contentSize(272px, 90%);
+      min-width: 234px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+
+      form {
+        @include flexProp(space-evenly, center, column);
+        height: 70%;
+        gap: 3px;
+
+        input {
+          @include contentSize(39px, 90%);
+          border: 2px solid $brandColor;
+          border-radius: 6px;
+          padding-left: 12px;
+          box-sizing: border-box;
+
+          &::placeholder {
+            @include fontProp(0.8em, 600);
+            color: rgb(175, 175, 175);
+          }
+        }
+        button {
+          width: 90%;
+          border-radius: 8px;
+        }
+      }
+    }
+    h6 {
+      text-align: center;
+      font-weight: 100;
+      span {
+        font-weight: 800;
+        a {
+          text-decoration: none;
+          color: $brandColor;
+
+          &:hover {
+            text-decoration: underline;
+            color: red;
+          }
+        }
+      }
+    }
+  }
+  .login_bg {
+    @include contentSize(inherit, 30%);
+    min-width: 209px;
+    background: url("../userAuth_img/iPhone_desk.png") no-repeat center;
+    background-size: contain;
+  }
+}
+
+@media (width: 912px), (width: 820px), (width: 768px) {
+  .loginPage {
+    .login_bg {
+      @include contentSize(50vh, 50%);
+      align-self: flex-start;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .loginPage {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+
+    .login_bg {
+      background: url("../userAuth_img/iPhone_mob.png") no-repeat center;
+      background-size: contain;
+      height: 65vh;
+    }
+  }
+}

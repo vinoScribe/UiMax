@@ -1,0 +1,39 @@
+@import "../../../style.scss";
+
+.keyFeature {
+  @include contentSize(53vh, 100%);
+  @include flexProp(space-evenly, center, row);
+  flex-wrap: wrap;
+  gap: 5px;
+  box-sizing: border-box;
+
+  .keyFeatureContainer {
+    @include contentSize(28vh, 21%);
+    min-width: 245px;
+    padding: 2px;
+    box-sizing: border-box;
+
+    .featureHeadline {
+      height: 40%;
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+
+      img {
+        @include contentSize(37px, 37px);
+        margin-right: 11px;
+      }
+    }
+    p {
+      font-size: 0.9em;
+      line-height: 1.3em;
+    }
+  }
+}
+
+@media (max-width: 511px) {
+  .keyFeature {
+    height: auto;
+    border: 2px solid;
+  }
+}

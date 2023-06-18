@@ -1,0 +1,73 @@
+@import "../../../../style.scss";
+
+@mixin bottomNavbarIconPosition {
+  position: relative;
+  right: 11px;
+}
+
+.bottomNavbar {
+  @include flexProp(space-evenly, center, row);
+  @include fontProp(0.9em, bold);
+  height: 98px;
+  margin: 1%;
+
+  .connectWithMe {
+    @include contentSize(100%, 31%);
+    @include flexProp(space-evenly, center, row);
+    gap: 5px;
+
+    [value="Message"] {
+      border: 2px solid $brandColor;
+      background: transparent;
+      color: $brandColor;
+    }
+  }
+
+  .footMenu {
+    width: 57%;
+
+    ul {
+      display: flex;
+      justify-content: space-evenly;
+      color: rgb(109, 109, 109);
+      li {
+        width: auto;
+        text-align: left;
+        display: inline-block;
+        cursor: default;
+
+        &:first-child::before {
+          content: url("../image/home.png");
+          @include bottomNavbarIconPosition;
+        }
+        &:nth-child(2)::before {
+          content: url("../image/profile.png");
+          @include bottomNavbarIconPosition;
+        }
+        &:last-child:before {
+          content: url("../image/community.png");
+          @include bottomNavbarIconPosition;
+        }
+        &:active {
+          color: $brandColor;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 610px) {
+  .bottomNavbar {
+    justify-content: center;
+    flex-direction: column;
+    .footMenu {
+      ul {
+        display: none;
+      }
+    }
+    .connectWithMe {
+      width: 60%;
+      min-width: 230px;
+    }
+  }
+}

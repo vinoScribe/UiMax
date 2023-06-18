@@ -1,0 +1,90 @@
+@import "../../../style.scss";
+
+.homePageComponentKit {
+  @include flexProp(space-between, center, row);
+  height: 73vh;
+
+  .wallposterContent {
+    @include contentSize(auto, 42%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 22px;
+    padding: 7px;
+
+    h4 {
+      color: $brandColor;
+    }
+    h2 {
+      width: 60%;
+    }
+    p {
+      width: 70%;
+    }
+  }
+
+  .leftSideContent {
+    margin-left: 65px;
+  }
+
+  .wallposter {
+    @include contentSize(323px, 34%);
+    min-width: 270px;
+  }
+
+  #homePageComponent_bg {
+    background: url("../commonComponentImage/components.png") no-repeat center;
+    background-size: contain;
+  }
+  #homePageUiKitPoster {
+    background: url("../commonComponentImage/ui_kit.png") no-repeat center;
+    background-size: contain;
+  }
+  #homePageComponentMob_bg {
+    display: none;
+  }
+  #homePageCodePoster {
+    background: url("../commonComponentImage/code.png") no-repeat center;
+    background-size: contain;
+  }
+}
+
+@media (max-width: 480px) {
+  .homePageComponentKit {
+    flex-direction: column;
+    height: 86vh;
+
+    .leftSideContent {
+      margin: 0;
+    }
+
+    .wallposterContent {
+      width: auto;
+      align-items: center;
+      margin: 13px;
+      h2,
+      p {
+        text-align: center;
+      }
+    }
+
+    #homePageComponent_bg {
+      display: none;
+    }
+
+    #homePageUiKitPoster {
+      background: url("../commonComponentImage/ui_mob.png") no-repeat center;
+      background-size: contain;
+    }
+    #homePageComponentMob_bg {
+      display: block;
+      background: url("../commonComponentImage/components_mob.png") no-repeat
+        center;
+      background-size: contain;
+    }
+    #homePageCodePoster {
+      background: url("../commonComponentImage/code_mob.png") no-repeat center;
+      background-size: contain;
+    }
+  }
+}

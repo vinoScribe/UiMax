@@ -1,12 +1,12 @@
 import React from "react";
 import Header from "../commonComponent/Header";
-import "./homeStyle.scss";
+import "./stylesheet/homeMain.scss";
 
 const HomeMainContent = () => {
   return (
-    <div className="home_main">
+    <div className="homeWelcomePage">
       <Header />
-      <div className="about_home_main_content">
+      <div className="homeContent">
         <h1>Lightning fast prototyping </h1>
         <p>
           Most calendars are designed for teams. Slate is designed for
@@ -14,7 +14,7 @@ const HomeMainContent = () => {
         </p>
         <button type="button">Try For Free</button>
       </div>
-      <div className="main_img" />
+      <div className="welcomePage_bg" />
     </div>
   );
 };

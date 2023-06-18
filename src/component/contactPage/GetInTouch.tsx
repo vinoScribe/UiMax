@@ -1,12 +1,12 @@
 import React from "react";
-import "./contactStyle.scss";
+import "./stylesheet/getInTouch.scss";
 import SocialMedia from "../commonComponent/SocialMedia";
 
 const GetInTouch = () => {
   return (
     <div className="getInTouch">
       <h2>Get in touch</h2>
-      <div className="about">
+      <div className="content">
         <p>
           Most calendars are designed for teams. Slate is designed for
           freelancers

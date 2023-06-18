@@ -1,49 +1,12 @@
-$brandColor: rgba(32, 145, 249, 1);
-@mixin display-prop($justContent, $alingItems, $direction) {
-  display: flex;
-  justify-content: $justContent;
-  align-items: $alingItems;
-  flex-direction: $direction;
-}
-@mixin contentSize($hgt, $wdt) {
-  height: $hgt;
-  width: $wdt;
-}
-@mixin fontProp($size, $isBold) {
-  font-size: $size;
-  font-weight: $isBold;
-}
-* {
-  margin: 0;
-  padding: 0;
-  letter-spacing: 0.03em;
-  font-family: sans-serif;
-}
-[type="button"] {
-  @include contentSize(42px, 92px);
-  @include fontProp(0.78em, bold);
-  background-color: $brandColor;
-  color: white;
-  border-radius: 5px;
-  border: 0;
-  padding: 6px;
-  box-sizing: border-box;
+@import "../../style.scss";
 
-  &:active {
-    transform: scale(0.93);
-  }
-}
-p {
-  color: rgb(139, 139, 139);
-}
-
-.aboutProduct {
-  @include display-prop(center, center, column);
+.productWelcomePage {
+  @include flexProp(center, center, column);
   height: 88vh;
   line-height: 2.5rem;
   background: rgb(248, 248, 248);
 
-  div {
+  .content {
     width: auto !important;
     text-align: center;
 
@@ -67,6 +30,7 @@ p {
       }
     }
   }
+
   p {
     width: 36%;
     min-width: 193px;
@@ -74,22 +38,19 @@ p {
     margin: 13px;
     text-align: center;
   }
+
   button {
     width: 127px;
     margin: 22px;
   }
 }
 
-.key_feature {
-  background-color: white;
-}
-
 @media (max-width: 480px) {
-  .aboutProduct {
+  .productWelcomePage {
     height: auto;
     justify-content: space-evenly !important;
 
-    div {
+    .content {
       height: 33vh;
     }
   }

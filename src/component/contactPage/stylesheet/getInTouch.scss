@@ -1,0 +1,15 @@
+@import "../../../style.scss";
+
+.getInTouch {
+  @include flexProp(space-evenly, center, column);
+  height: 51vh;
+  .content {
+    width: 31%;
+    min-width: 193px;
+    text-align: center;
+    line-height: 1.3rem;
+    h2 {
+      margin: 15px;
+    }
+  }
+}

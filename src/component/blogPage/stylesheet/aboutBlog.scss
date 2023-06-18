@@ -1,0 +1,39 @@
+@import "../../../style.scss";
+
+.blogWelcomePage {
+  @include flexProp(center, center, column);
+  height: 88vh;
+  line-height: 2.5rem;
+  background: rgb(248, 248, 248);
+
+  .contentOfWelcomePage {
+    width: 280px;
+    text-align: center;
+
+    h3 {
+      height: 49px;
+      color: rgb(120, 120, 120);
+    }
+    h1 {
+      height: 95px;
+      font-weight: 800;
+
+      span {
+        background: linear-gradient(
+          to bottom right,
+          rgba(0, 243, 185, 0.87) 10%,
+          rgba(33, 135, 255, 0.87)
+        );
+        background-clip: text;
+        color: transparent;
+      }
+    }
+  }
+  p {
+    width: 36%;
+    min-width: 193px;
+    line-height: 1.4rem;
+    margin: 13px;
+    text-align: center;
+  }
+}

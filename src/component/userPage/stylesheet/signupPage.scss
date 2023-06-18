@@ -1,0 +1,116 @@
+@import "../../../style.scss";
+
+.signupPage {
+  @include contentSize(71vh, 100%);
+  display: flex;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+  background: rgb(248, 248, 248, 1);
+
+  .signup_bg {
+    @include contentSize(97%, 40%);
+    align-self: center;
+    background: url("../userAuth_img/signup.png") no-repeat center;
+    background-size: 100% 100%;
+  }
+
+  .userSignup {
+    @include contentSize(80%, 60%);
+    @include flexProp(space-evenly, center, column);
+    padding: 12px;
+    text-align: center;
+    box-sizing: border-box;
+
+    .signupContent {
+      width: 90%;
+
+      h2 {
+        color: $brandColor;
+        margin: 7px;
+      }
+      p {
+        width: 100%;
+        min-width: 232px;
+        font-size: 0.8em;
+        color: rgb(104, 104, 104);
+        line-height: 1.4em;
+      }
+    }
+
+    .signupInput {
+      @include contentSize(272px, 90%);
+      min-width: 234px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+
+      form {
+        @include flexProp(space-evenly, center, column);
+        height: 90%;
+
+        .userAuth {
+          @include contentSize(37px, 90%);
+          max-width: 453px;
+          padding-left: 12px;
+          box-sizing: border-box;
+          border: 2px solid $brandColor;
+          border-radius: 6px;
+
+          &::placeholder {
+            @include fontProp(0.8em, 600);
+            color: rgb(175, 175, 175);
+          }
+        }
+        button {
+          width: 183px;
+          border-radius: 8px;
+        }
+
+        .agreedConditions {
+          p {
+            display: inline;
+            color: black;
+            margin-left: 10px;
+            font-size: 0.75em;
+
+            span {
+              color: $brandColor;
+            }
+          }
+        }
+      }
+
+      h6 {
+        font-weight: 100;
+        span {
+          font-weight: 800;
+          a {
+            text-decoration: none;
+            color: $brandColor;
+
+            &:hover {
+              text-decoration: underline;
+              color: red;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .signupPage {
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+
+    .userSignup {
+      width: 90%;
+    }
+
+    .signup_bg {
+      @include contentSize(53vh, 100%);
+    }
+  }
+}

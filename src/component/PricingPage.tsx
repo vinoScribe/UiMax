@@ -1,20 +1,20 @@
 import React from "react";
 import HeaderNavbar from "./commonComponent/Header";
 import Footer from "./commonComponent/Footer";
-import AboutPricePage from "./pricingPage/AboutPricePage";
+import PriceWelcomePage from "./pricingPage/PriceWelcomePage";
 import ModularKit from "./commonComponent/ModularKit";
 import PlanInfo from "./pricingPage/PlanInfo";
-import KeyFeature from "./commonComponent/KeyFeature";
 import FrequentlyAskedQiestion from "./pricingPage/FrequentlyAskedQuestion";
 import Review from "./pricingPage/Review";
+import KeyFeatureComponent from "./commonComponent/keyFeature/KeyFeatureComponent";
 
 const PricingPage = () => {
   return (
     <>
       <HeaderNavbar />
-      <AboutPricePage />
+      <PriceWelcomePage />
       <PlanInfo />
-      <KeyFeature />
+      <KeyFeatureComponent />
       <FrequentlyAskedQiestion />
       <Review />
       <ModularKit />
