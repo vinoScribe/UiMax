@@ -6,22 +6,34 @@ import MobileMenuBar from "../mobileMenuBar/MobileMenuBar";
 const Header = () => {
   const getMenubar = () => {};
 
+  const headBarNavLink = [
+    {
+      path: "/",
+      label: "Home",
+    },
+    {
+      path: "/ProductPage",
+      label: "Product",
+    },
+    {
+      path: "/PricingPage",
+      label: "Pricing",
+    },
+    {
+      path: "/ContactPage",
+      label: "Contact",
+    },
+  ];
+
   return (
     <header>
       <div className="brandLogo" />
       <nav>
         <ul>
           <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/ProductPage">Product</Link>
-          </li>
-          <li>
-            <Link to="/PricingPage">Pricing</Link>
-          </li>
-          <li>
-            <Link to="/ContactPage">Contact</Link>
+            {headBarNavLink.map((menu) => {
+              return <Link to={menu.path}>{menu.label}</Link>;
+            })}
           </li>
         </ul>
       </nav>
@@ -39,7 +51,7 @@ const Header = () => {
         </Link>
 
         <div className="menuBarOnMobile" onClick={getMenubar}>
-          {<MobileMenuBar />}
+          <MobileMenuBar />
         </div>
       </div>
     </header>

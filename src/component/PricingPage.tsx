@@ -1,7 +1,7 @@
 import React from "react";
 import HeaderNavbar from "./commonComponent/Header";
 import Footer from "./commonComponent/Footer";
-import AboutPricePage from "./pricingPage/AboutPricePage";
+import PriceWelcomePage from "./pricingPage/PriceWelcomePage";
 import ModularKit from "./commonComponent/ModularKit";
 import PlanInfo from "./pricingPage/PlanInfo";
 import FrequentlyAskedQiestion from "./pricingPage/FrequentlyAskedQuestion";
@@ -12,7 +12,7 @@ const PricingPage = () => {
   return (
     <>
       <HeaderNavbar />
-      <AboutPricePage />
+      <PriceWelcomePage />
       <PlanInfo />
       <KeyFeatureComponent />
       <FrequentlyAskedQiestion />

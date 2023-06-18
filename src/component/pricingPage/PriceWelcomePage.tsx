@@ -1,10 +1,10 @@
 import React from "react";
 import "./stylesheet/aboutPrice.scss";
 
-const AboutPricePage = () => {
+const PriceWelcomePage = () => {
   return (
-    <div className="aboutPrice main_header">
-      <div>
+    <div className="priceWelcomePage">
+      <div className="contentOfWelcomePage">
         <h3>PRICING</h3>
         <h1>
           Pricing that <span>scales with you</span>
@@ -17,4 +17,4 @@ const AboutPricePage = () => {
   );
 };
 
-export default AboutPricePage;
+export default PriceWelcomePage;

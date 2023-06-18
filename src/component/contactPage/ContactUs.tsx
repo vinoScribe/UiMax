@@ -12,6 +12,7 @@ const ContactUs = () => {
       return { ...initialState, [propertyName]: e.target.value };
     });
   };
+
   const updateUserName = updateInputField("name");
   const updateUserEmail = updateInputField("email");
 

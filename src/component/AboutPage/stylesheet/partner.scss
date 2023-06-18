@@ -1,11 +1,11 @@
 @import "../../../style.scss";
 
-.official_partner {
+.officialPartner {
   height: 58vh;
   @include flexProp(space-evenly, center, column);
 
   .content,
-  .official_partner_logo {
+  .officialPartner_bg {
     @include flexProp(space-evenly, center, row);
   }
 
@@ -22,7 +22,7 @@
     }
   }
 
-  .official_partner_logo {
+  .officialPartner_bg {
     @include contentSize(50%, 424px);
     gap: 5px;
 
@@ -33,9 +33,9 @@
 }
 
 @media (max-width: 480px) {
-  .official_partner {
+  .officialPartner {
     height: auto;
-    .official_partner_logo {
+    .officialPartner_bg {
       flex-direction: column;
       gap: 34px;
       img {

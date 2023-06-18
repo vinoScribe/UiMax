@@ -17,29 +17,6 @@ header {
   }
 }
 
-@media (max-width: 640px) {
-  header {
-    nav,
-    .inputBar,
-    button {
-      display: none;
-    }
-
-    .mobileVersion {
-      display: inline-block;
-
-      .menuBarOnMobile {
-        @include contentSize(21px, 21px);
-        display: inline-block;
-        margin-left: 19px;
-        background: url("../commonComponentImage/menu_bar_mob_black.png")
-          no-repeat center;
-        background-size: contain;
-      }
-    }
-  }
-}
-
 nav {
   width: 40%;
   ul {
@@ -48,9 +25,12 @@ nav {
     padding: 0;
     gap: 9px;
     li {
-      display: inline-block;
-      cursor: default;
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
       font-size: 0.96em;
+
       a {
         @include fontProp(0.95em, bold);
         color: rgb(71, 71, 71);
@@ -92,5 +72,28 @@ nav {
   input:focus {
     border: 1px solid grey;
     outline: none;
+  }
+}
+
+@media (max-width: 640px) {
+  header {
+    nav,
+    .inputBar,
+    button {
+      display: none;
+    }
+
+    .mobileVersion {
+      display: inline-block;
+
+      .menuBarOnMobile {
+        @include contentSize(21px, 21px);
+        display: inline-block;
+        margin-left: 19px;
+        background: url("../commonComponentImage/menu_bar_mob_black.png")
+          no-repeat center;
+        background-size: contain;
+      }
+    }
   }
 }

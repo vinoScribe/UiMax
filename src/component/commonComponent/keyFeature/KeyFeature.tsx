@@ -1,11 +1,11 @@
 import React from "react";
 import "./keyFeature.scss";
 
-const KeyFeature = ({ getTitle, imageSrc }) => {
+const KeyFeature = ({ getTitle, keyfeature_bg }) => {
   return (
-    <div className="key_feature_module">
-      <div className="feature_headline">
-        <img src={imageSrc} alt="key-feature logo" />
+    <div className="keyFeatureContainer">
+      <div className="featureHeadline">
+        <img src={keyfeature_bg} alt="Feature logo" />
         <h3>{getTitle}</h3>
       </div>
       <p>

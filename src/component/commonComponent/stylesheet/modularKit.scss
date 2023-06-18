@@ -1,6 +1,6 @@
 @import "../../../style.scss";
 
-.modular_kit {
+.modularKit {
   @include flexProp(space-evenly, center, column);
   background: rgba(37, 43, 66);
   height: 56vh;
@@ -15,7 +15,7 @@
     color: rgb(188, 188, 188);
   }
 
-  .modular_kit_btn {
+  .modularKit_btn {
     width: 26%;
     display: flex;
     justify-content: center;

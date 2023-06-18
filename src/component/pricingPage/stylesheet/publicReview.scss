@@ -1,11 +1,11 @@
 @import "../../../style.scss";
 
-.public_opinion {
+.publicFeedback {
   @include flexProp(space-evenly, center, column);
   @include contentSize(148vh, 100%);
   box-sizing: border-box;
 
-  .img_src {
+  .feedbackerProfile {
     display: flex;
     justify-content: center;
     align-content: space-evenly;
@@ -25,7 +25,7 @@
 }
 
 @media (max-width: 890px) {
-  .public_opinion {
+  .publicFeedback {
     height: auto;
 
     h2,

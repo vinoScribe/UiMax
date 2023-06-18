@@ -2,19 +2,19 @@ import React from "react";
 import "../stylesheet/publicReview.scss";
 
 const ModuleComponent = ({ type, selectPremium, getCycle }) => {
-  const loadedFeature = (
-    <div className="features_in_given_plan">
+  const featuresBasedOnPlanType = (
+    <div className="featuresInGivenPlan">
       <ul>
-        <li className="selected selected_with_white fullySupported">
+        <li className="selected selectedWithWhite fullySupported">
           Unlimited product updates
         </li>
-        <li className="selected selected_with_white fullySupportede">
+        <li className="selected selectedWithWhite fullySupported">
           Unlimited Shares
         </li>
-        <li className="selected selected_with_white fullySupported">
+        <li className="selected selectedWithWhite fullySupported">
           Every feature in Figmaland
         </li>
-        <li className="notSelected selected_with_white fullySupported">
+        <li className="notSelected selectedWithWhite fullySupported">
           1GB Cloud storage
         </li>
         <li className="notSelected fullySupported">
@@ -25,18 +25,18 @@ const ModuleComponent = ({ type, selectPremium, getCycle }) => {
   );
 
   return (
-    <div className="planInfo_container">
-      <div className="plan_desc">
+    <div className="planInfoCard">
+      <div className="planHeader">
         <h3>{type.plan}</h3>
         <p>Organize across all apps by hand</p>
       </div>
-      <div className="cost_of_plan">
+      <div className="costOfPlan">
         <h1>{selectPremium}</h1>
         <h3>$</h3>
         <p>Per {getCycle}</p>
       </div>
 
-      {loadedFeature}
+      {featuresBasedOnPlanType}
 
       <button type="button">Order Now</button>
     </div>

@@ -1,12 +1,12 @@
 @import "../../../style.scss";
 
-.aboutPrice {
+.priceWelcomePage {
   @include flexProp(center, center, column);
   height: 88vh;
   line-height: 2.5rem;
   background: rgb(248, 248, 248);
 
-  div {
+  .contentOfWelcomePage {
     width: auto !important;
     text-align: center;
 

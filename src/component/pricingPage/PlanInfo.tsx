@@ -7,38 +7,42 @@ const PlanInfo = () => {
   const dispatch = useDispatch();
   const dataRetriever = useSelector((state: any) => state);
 
-  const annualPlan = () => {
+  const getAnnualPlan = () => {
     dispatch({ type: "ANNUAL_PREMIUM" });
   };
-  const monthlyPlan = () => {
+  const getMonthlyPlan = () => {
     dispatch({ type: "MONTHLY_PREMIUM" });
   };
 
   const [cycle, setCycle] = useState("Month");
 
+  const updatedMonthlyCycle = () => {
+    setCycle("Month");
+  };
+
+  const updatedAnualCycle = () => {
+    setCycle("Year");
+  };
+
   return (
-    <div className="cost_info">
-      <div className="toggle_plan">
+    <div className="planInfo">
+      <div className="togglePlan">
         <button
           type="button"
-          onClick={monthlyPlan}
-          onClickCapture={() => {
-            setCycle("Month");
-          }}
+          onClick={getMonthlyPlan}
+          onClickCapture={updatedMonthlyCycle}
         >
           Monthly
         </button>
         <button
           type="button"
-          onClick={annualPlan}
-          onClickCapture={() => {
-            setCycle("Year");
-          }}
+          onClick={getAnnualPlan}
+          onClickCapture={updatedAnualCycle}
         >
           Yearly (save 20%)
         </button>
       </div>
-      <div className="select_plan">
+      <div className="planSelectionContainer">
         <ModulePlan planUpdate={dataRetriever} getCycle={cycle} />
       </div>
     </div>

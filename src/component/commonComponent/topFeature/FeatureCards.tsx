@@ -2,7 +2,7 @@ import React from "react";
 
 const FeatureCards = ({ image, heading }) => {
   return (
-    <div className="content_feature">
+    <div className="contentFeature">
       <img src={image} alt="top feature icon" />
       <h3>{heading}</h3>
       <p>

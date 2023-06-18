@@ -18,9 +18,9 @@ const reviewList = [
 
 const Review = () => {
   return (
-    <div className="public_opinion">
+    <div className="publicFeedback">
       <h2>People are diggin’ it</h2>
-      <div className="img_src">
+      <div className="feedbackerProfile">
         {reviewList.map((review, index) => {
           return <img key={index} src={review} alt="public opinion" />;
         })}

@@ -1,19 +1,19 @@
 @import "../../../style.scss";
 
-.key_feature {
+.keyFeature {
   @include contentSize(53vh, 100%);
   @include flexProp(space-evenly, center, row);
   flex-wrap: wrap;
   gap: 5px;
   box-sizing: border-box;
 
-  .key_feature_module {
+  .keyFeatureContainer {
     @include contentSize(28vh, 21%);
     min-width: 245px;
     padding: 2px;
     box-sizing: border-box;
 
-    .feature_headline {
+    .featureHeadline {
       height: 40%;
       display: flex;
       align-items: center;
@@ -31,8 +31,9 @@
   }
 }
 
-@media (max-width: 500px) {
-  .key_feature {
+@media (max-width: 511px) {
+  .keyFeature {
     height: auto;
+    border: 2px solid;
   }
 }

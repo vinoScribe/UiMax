@@ -1,12 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-interface DEFINE_INITIALSTATE {
+interface INITIALSTATE_TYPE {
   plan: string;
   price: number;
   cycle: [string, string];
 }
 
-const initialState: DEFINE_INITIALSTATE[] = [
+const initialState: INITIALSTATE_TYPE[] = [
   {
     plan: "FREE",
     price: 0,
@@ -32,7 +32,7 @@ const rootReducer = (state: any = initialState, action: any) => {
     case "ANNUAL_PREMIUM": {
       return initialState.map((planInfo) => {
         const offerPrice = planInfo.price * 12 - (planInfo.price * 20) / 100;
-        return offerPrice;
+        return offerPrice.toFixed(0);
       });
     }
     default: {

@@ -1,14 +1,28 @@
 import React from "react";
 import "./stylesheet/contactInfo.scss";
 
+const addressDetails = [
+  {
+    id: "contactHome",
+    detailReference:
+      "6386 Spring St undefined Anchorage, Georgia 12473 United States",
+  },
+  {
+    id: "contactNumber",
+    detailReference: "(843) 555-0130",
+  },
+  {
+    id: "contactMail",
+    detailReference: "willie.jennings@example.com",
+  },
+];
+
 const AddressDetails = ({ id, detailReference }) => {
   return (
-    <>
-      <div className="addressDetail">
-        <div id={id} className="contactLogo" />
-        <p>{detailReference}</p>
-      </div>
-    </>
+    <div className="addressDetail">
+      <div id={id} className="contactLogo" />
+      <p>{detailReference}</p>
+    </div>
   );
 };
 
@@ -27,15 +41,9 @@ const ContactInfo = () => {
         />
       </div>
       <div className="addressContainer">
-        <AddressDetails
-          id="contactHome"
-          detailReference="6386 Spring St undefined Anchorage, Georgia 12473 United States"
-        />
-        <AddressDetails id="contactNumber" detailReference="(843) 555-0130" />
-        <AddressDetails
-          id="contactMail"
-          detailReference="willie.jennings@example.com"
-        />
+        {addressDetails.map(({ id, detailReference }) => (
+          <AddressDetails key={id} id={id} detailReference={detailReference} />
+        ))}
       </div>
     </div>
   );

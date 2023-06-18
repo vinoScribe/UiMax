@@ -2,7 +2,7 @@ import React from "react";
 import "./stylesheet/frequentlyAskedQuest.scss";
 
 const FrequentlyAskedQiestion = () => {
-  const left_Question = [
+  const listOfQuestions = [
     "Design with real data",
     "Start working faster today",
     "Just type what's on your mind and we'll get you there.",
@@ -16,10 +16,10 @@ const FrequentlyAskedQiestion = () => {
   return (
     <div className="FAQ">
       <h2>FAQ</h2>
-      <div className="left_side_FAQ">
+      <div className="questionContainer">
         <ul>
-          {left_Question.map((question, index) => {
-            return <li key={index}>{question}</li>;
+          {listOfQuestions.map((question) => {
+            return <li>{question}</li>;
           })}
         </ul>
       </div>

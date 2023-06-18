@@ -1,10 +1,10 @@
 @import "../../../style.scss";
 
-.top_features_app {
+.topFeaturesInTheApp {
   @include flexProp(space-evenly, center, column);
   height: 93vh;
 
-  .feature_content {
+  .featureContent {
     @include contentSize(auto, 310px);
     text-align: center;
 
@@ -14,7 +14,7 @@
     }
   }
 
-  .amazing_feature_component {
+  .amazingFeatures {
     @include contentSize(55vh, 100%);
     @include flexProp(space-evenly, center, row);
     gap: 6px;
@@ -26,7 +26,7 @@
       gap: 7px;
       box-sizing: inherit;
 
-      .content_feature {
+      .contentFeature {
         @include contentSize(inherit, 254px);
         @include flexProp(space-evenly, center, column);
         border: 1px solid rgb(205, 205, 205);
@@ -60,22 +60,22 @@
 }
 
 @media (max-width: 480px) {
-  .top_features_app {
+  .topFeaturesInTheApp {
     height: auto;
     margin-top: 34px;
     gap: 16px;
-    .amazing_feature_component {
+    .amazingFeatures {
       flex-direction: column;
       height: 179vh;
       gap: inherit;
 
-      .feature_content {
+      .featureContent {
         width: 243px;
       }
       .img {
         flex-direction: column;
         gap: inherit;
-        .content_feature {
+        .contentFeature {
           height: 293px;
         }
       }
